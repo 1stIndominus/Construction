@@ -3,17 +3,23 @@
 .nav {
   display: flex;
   width: 100%;
+  // max-width: max-content;
   height: 70px;
-  background-color: #6d5ffd;
+  background-color: #3586FF;
+
+  @include onDesktop {
+    height: 100px;
+  }
 
   &__button {
     display: flex;
     color: #fff;
     border: none;
-    background-color: #6d5ffd;
+    background-color: #3586FF;
+    opacity: 0.75;
 
     &:hover {
-      color: #000;
+      opacity: 1;
     }
   }
 
@@ -31,14 +37,15 @@
       align-items: center;
       gap: 10px;
       border: none;
-      background-color: #6d5ffd;
+      background-color: #3586FF;
     }
 
     &--title {
       color: #fff;
+      opacity: 0.75;
 
       &:hover {
-        color: #000;
+        opacity: 1;
       }
     }
 
