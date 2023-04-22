@@ -1,5 +1,7 @@
 import React from "react";
 import { FaConfluence } from "react-icons/fa";
+import { GiHouse } from "react-icons/gi";
+
 import "./style.scss";
 import { BiAlignRight } from "react-icons/bi";
 export const NavBar = () => {
@@ -7,8 +9,12 @@ export const NavBar = () => {
     <nav className="nav">
       <div className="nav__content">
         <button className="nav__content--logo">
-          <FaConfluence color="#fff" size={20} />
-          <p className="nav__content--title">Logo</p>
+          <div className="logo">
+            <p className="nav__content--title">V. Wallco</p>
+            {/* <GiHouse color="#fff" size={20} /> */}
+            <div className="logo__image"></div>
+            <p className="nav__content--title">Homes</p>
+          </div>
         </button>
         <div className="nav__content--details">
           <button className="nav__button">Home</button>

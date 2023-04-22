@@ -1,11 +1,11 @@
-@import '../../utils/mixins';
+@import "../../utils/mixins";
 
 .nav {
   display: flex;
   width: 100%;
   // max-width: max-content;
   height: 70px;
-  background-color: #3586FF;
+  background-color: #3586ff;
 
   @include onDesktop {
     height: 100px;
@@ -15,11 +15,11 @@
     display: flex;
     color: #fff;
     border: none;
-    background-color: #3586FF;
-    opacity: 0.75;
+    background-color: #3586ff;
+    transition: 0.5s;
 
     &:hover {
-      opacity: 1;
+      transform: translateY(-10px);
     }
   }
 
@@ -35,18 +35,15 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: center;
+
       gap: 10px;
       border: none;
-      background-color: #3586FF;
+      background-color: #3586ff;
     }
 
     &--title {
       color: #fff;
-      opacity: 0.75;
-
-      &:hover {
-        opacity: 1;
-      }
     }
 
     &--details {
@@ -61,12 +58,35 @@
 
     &--burger {
       border: none;
-      background-color: #6d5ffd;
+      background-color: #3586ff;
       display: none;
 
       @include onTablet {
         display: flex;
       }
     }
+  }
+}
+
+.logo {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 5px;
+  transition: 0.5s;
+
+  &__image {
+    background-image: url(../../assets/images/logo4.png);
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 }
