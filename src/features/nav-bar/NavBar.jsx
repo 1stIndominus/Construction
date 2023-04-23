@@ -10,11 +10,12 @@ export const NavBar = () => {
       <div className="nav__content">
         <button className="nav__content--logo">
           <div className="logo">
-            <p className="nav__content--title">V. Wallco</p>
+            <p className="nav__content--title">V.</p>
             {/* <GiHouse color="#fff" size={20} /> */}
             <div className="logo__image"></div>
-            <p className="nav__content--title">Homes</p>
+            <p className="nav__content--title">Wallco</p>
           </div>
+          <p className="nav__content--title--small">Homes</p>
         </button>
         <div className="nav__content--details">
           <button className="nav__button">Home</button>
