@@ -8,12 +8,7 @@ export const NavBar = () => {
       <nav className="nav">
         <div className="nav__content">
           <div className="nav__logo">
-            <div className="logo">
-              <p className="logo__title">V.</p>
-              <div className="logo__image"></div>
-              <p className="logo__title">Wallco</p>
-            </div>
-            <p className="logo__title--small">Homes</p>
+            <div className="logo"></div>
           </div>
           <ul className="navigation">
             <li className="navigation__list">

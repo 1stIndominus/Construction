@@ -104,27 +104,9 @@
   color: #fff;
   gap: 5px;
 
-  &__title {
-    color: #fff;
-    font-family: Castoro-Regular;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-
-    &--small {
-      color: #fff;
-      margin: 2px, 0;
-      padding: 0;
-      font-size: 8px;
-      font-family: Castoro-Regular;
-    }
-  }
-
-  &__image {
-    background-image: url(../../assets/icons/Vector.png);
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 18px;
-    background-size: contain;
-  }
+  background-image: url(../../assets/icons/gold-logo.png);
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
 }
