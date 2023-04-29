@@ -27,7 +27,7 @@
 
 
     &--wrapper {
-      width: 50%;
+      width: 90%;
       margin: 0 auto;
     }
   }
@@ -35,7 +35,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
     align-items: center;
     margin: 0 auto;
 
@@ -51,6 +51,7 @@
     &--title {
       font-size: 2rem;
       margin: 0;
+      color: #fff;
 
       @include onTablet {
         font-size: 2rem;
@@ -78,6 +79,7 @@
       font-size: 0.9rem;
       font-style: italic;
       font-weight: 300;
+      color: rgb(247, 227, 227);
 
       @include onTablet {
         font-size: 1rem;
@@ -96,6 +98,7 @@
       font-size: 1.1rem;
       font-style: italic;
       font-weight: 300;
+      color: rgb(247, 227, 227);
 
       @include onTablet {
         font-size: 1.4rem;
@@ -115,8 +118,8 @@
     }
 
     &--button {
-      width: 120px;
-      height: 35px;
+      width: 200px;
+      height: 50px;
       background-color: var(--primary-dark);
       border-color: var(--primary-dark);
       border: none;

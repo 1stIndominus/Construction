@@ -1,12 +1,13 @@
 @import '../../utils/mixins';
+@import '../../utils/vars';
 
 .main__container {
   display: flex;
   flex-direction: column;
-  background-color: #f0efff;
-  height: 100%;
+  background-color: var(--overlay);
+  // height: 100%;
   margin: 0 auto;  
-  max-width: 1440px;
+  // max-width: 1440px;
 
   @include onDesktop {
     max-width: 1440px;

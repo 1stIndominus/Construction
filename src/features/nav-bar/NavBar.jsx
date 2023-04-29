@@ -1,34 +1,75 @@
 import React from "react";
-import { FaConfluence } from "react-icons/fa";
-import { GiHouse } from "react-icons/gi";
-
-import "./style.scss";
+import { Link } from "react-scroll";
+import "./nav.scss";
 import { BiAlignRight } from "react-icons/bi";
 export const NavBar = () => {
   return (
-    <div className="header">
+    <header className="header">
       <nav className="nav">
         <div className="nav__content">
-          <button className="nav__content--logo">
+          <div className="nav__logo">
             <div className="logo">
-              <p className="nav__content--title">V.</p>
-              {/* <GiHouse color="#fff" size={20} /> */}
+              <p className="logo__title">V.</p>
               <div className="logo__image"></div>
-              <p className="nav__content--title">Wallco</p>
+              <p className="logo__title">Wallco</p>
             </div>
-            <p className="nav__content--title--small">Homes</p>
-          </button>
-          <div className="nav__content--details">
-            <button className="nav__button">Home</button>
-            <button className="nav__button">About us</button>
-            <button className="nav__button">Services</button>
-            <button className="nav__button">Contacts</button>
+            <p className="logo__title--small">Homes</p>
           </div>
-          <button className="nav__content--burger">
+          <ul className="navigation">
+            <li className="navigation__list">
+              <Link
+                to="Home"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                className="navigation__item"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="navigation__list">
+              <Link
+                to="About"
+                spy={true}
+                smooth={true}
+                offset={-300}
+                duration={500}
+                className="navigation__item"
+              >
+                About us
+              </Link>
+            </li>
+            <li className="navigation__list">
+              <Link
+                to="Services"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="navigation__item"
+              >
+                Services
+              </Link>
+            </li>
+            <li className="navigation__list">
+              <Link
+                to="Contacts"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="navigation__item"
+              >
+                Contacts
+              </Link>
+            </li>
+          </ul>
+          <button className="nav__burger">
             <BiAlignRight color="#fff" size={24} />
           </button>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };

@@ -1,0 +1,130 @@
+@import "../../utils/mixins";
+@import "../../utils/fonts";
+@import "../../utils/vars";
+
+.header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  top: 0;
+  z-index: 1;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  background-color: var(--total-black);
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: var(--total-black);
+  align-items: center;
+  margin: auto;
+  height: 100%;
+
+  @include onDesktop {
+    height: 100px;
+  }
+
+  &__content {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-sizing: border-box;
+
+    border: none;
+    background-color: transparent;
+    transition: 0.5s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__burger {
+    border: none;
+    background-color: transparent;
+    display: flex;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  display: none;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+
+  @include onTablet {
+    display: flex;
+  }
+
+  &__list {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__item {
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    transition: 0.5s;
+    opacity: 0.8;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+      transition: 0.5s;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 5px;
+
+  &__title {
+    color: #fff;
+    font-family: Castoro-Regular;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+
+    &--small {
+      color: #fff;
+      margin: 2px, 0;
+      padding: 0;
+      font-size: 8px;
+      font-family: Castoro-Regular;
+    }
+  }
+
+  &__image {
+    background-image: url(../../assets/icons/Vector.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+  }
+}
