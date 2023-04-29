@@ -2,10 +2,10 @@
 @import '../../utils/mixins.scss';
 
 .about {
-  margin: 150px auto;
+  margin: 100px auto;
 
   @include onAverage {
-    margin: 200px auto 0;
+    margin: 100px auto 0;
     height: 50vh;
   }
 

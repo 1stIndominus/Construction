@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-scroll";
 import "./nav.scss";
-import { BiAlignRight } from "react-icons/bi";
+import { MyProvider } from "../../helpers/ContextMenu";
+
 export const NavBar = () => {
+  const { show, toggle } = useContext(MyProvider);
+
   return (
     <header className="header">
       <nav className="nav">
@@ -28,7 +31,7 @@ export const NavBar = () => {
                 to="About"
                 spy={true}
                 smooth={true}
-                offset={-300}
+                offset={-110}
                 duration={500}
                 className="navigation__item"
               >
@@ -60,9 +63,17 @@ export const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <button className="nav__burger">
-            <BiAlignRight color="#fff" size={24} />
-          </button>
+          <div className="burger-menu" onClick={toggle}>
+            <div
+              className={show ? "burger-bar clicked" : "burger-bar unclicked"}
+            ></div>
+            <div
+              className={show ? "burger-bar clicked" : "burger-bar unclicked"}
+            ></div>
+            <div
+              className={show ? "burger-bar clicked" : "burger-bar unclicked"}
+            ></div>
+          </div>
         </div>
       </nav>
     </header>
