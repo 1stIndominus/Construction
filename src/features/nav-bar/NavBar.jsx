@@ -10,9 +10,7 @@ export const NavBar = () => {
     <header className="header">
       <nav className="nav">
         <div className="nav__content">
-          <div className="nav__logo">
-            <div className="logo"></div>
-          </div>
+          <div className="nav__logo"></div>
           <ul className="navigation">
             <li className="navigation__list">
               <Link
