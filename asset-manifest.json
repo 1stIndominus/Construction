@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Construction/static/css/main.f9206a8d.css",
-    "main.js": "/Construction/static/js/main.413759b7.js",
+    "main.css": "/Construction/static/css/main.1e9c4837.css",
+    "main.js": "/Construction/static/js/main.dd52725b.js",
     "static/media/gold-logo.png": "/Construction/static/media/gold-logo.37c015884fdda9186fc1.png",
     "static/media/hero.jpg": "/Construction/static/media/hero.8562676a6412e9ec4644.jpg",
     "static/media/SourceSansPro-Regular.ttf": "/Construction/static/media/SourceSansPro-Regular.a5357cc4e5d4eeb42793.ttf",
     "static/media/vitaliy.jpg": "/Construction/static/media/vitaliy.0312e6940132ae1b4620.jpg",
     "static/media/CastoroTitling-Regular.ttf": "/Construction/static/media/CastoroTitling-Regular.baead5ee069318eedb41.ttf",
     "index.html": "/Construction/index.html",
-    "main.f9206a8d.css.map": "/Construction/static/css/main.f9206a8d.css.map",
-    "main.413759b7.js.map": "/Construction/static/js/main.413759b7.js.map"
+    "main.1e9c4837.css.map": "/Construction/static/css/main.1e9c4837.css.map",
+    "main.dd52725b.js.map": "/Construction/static/js/main.dd52725b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9206a8d.css",
-    "static/js/main.413759b7.js"
+    "static/css/main.1e9c4837.css",
+    "static/js/main.dd52725b.js"
   ]
 }
