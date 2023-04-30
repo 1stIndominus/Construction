@@ -7,10 +7,10 @@ export const Preview = () => {
       <div className="hero__content">
         <p className="hero__title">Call us</p>
         <p className="hero__number">+1 208-966-1947</p>
-        <p data-text="Because Money" className="hero__subtitle">
-          Because Money
+        <p data-text="AllBuild Homes" className="hero__subtitle">
+          AllBuild Homes
         </p>
-        <p className="hero__description">Doesn't come with instructions</p>
+        <p className="hero__description">Expert Construction Services and Solutions</p>
         <div className="hero__button">
           <a href="tel:+1 208-966-1947" className="hero__button--text">
             Free Consultation

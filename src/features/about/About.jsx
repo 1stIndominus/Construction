@@ -13,13 +13,18 @@ export const About = () => {
           <h1 className="about__content--title">About</h1>
           {/* <span className="about__content--line"></span> */}
           <p className="about__content--description">
-            AllBuild is an Increadible construction company with offices in multiple jurisdictions over the country. Working with Intense gives me the ability to advise internat ional expatriates living in
-            the middle east from where I live in USA.
+            Are you looking to renovate your home? AllBuild Homes is here to
+            help you transform your house into a stunning masterpiece. We
+            specialize in high-quality siding and soffit installations that not
+            only enhance the look of your home but also protect it from harsh
+            weather conditions. Our expert team of professionals will guide you
+            through the process, ensuring that your vision is executed to
+            perfection.
           </p>
           <p className="about__content--me">
-            I am Vitaliy Radchuk, a senior advisor for an independently owned
-            financial planning company called{" "}
-            <span className="about__content--me-highlight">AllBuild</span>.
+            <span className="about__content--me-highlight">AllBuild Homes</span>
+            : Quality construction, expertly installed siding, soffit, windows,
+            and doors. Headed by experienced builder Vitaliy Radchuk.
           </p>
           <button className="about__content--button">Explore More</button>
         </div>

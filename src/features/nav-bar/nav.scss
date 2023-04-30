@@ -45,14 +45,6 @@
   &__logo {
     display: flex;
     align-items: center;
-    color: #fff;
-    gap: 5px;
-    transition: 0.5s;
-    cursor: pointer;
-  
-    &:hover {
-      transform: translateY(-5px);
-    }
   
     background-image: url(../../assets/icons/gold-logo.png);
     background-repeat: no-repeat;
@@ -94,13 +86,14 @@
   left: 0;
   z-index: 10;
   background-color: var(--total-black);
+  transition: width 1s ease;
 
   &__list {
     display: flex;
     flex-direction: column;
     list-style: none;
-    align-items: flex-end;
-    margin: 30px 40px;
+    align-items: center;
+    padding: 0;
   }
 
   &__item {
