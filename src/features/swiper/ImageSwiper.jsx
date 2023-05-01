@@ -29,11 +29,13 @@ const data = [
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source: "https://5.imimg.com/data5/DC/II/FU/SELLER-5079754/vinyl-sidings-500x500.jpg",
+    source:
+      "https://5.imimg.com/data5/DC/II/FU/SELLER-5079754/vinyl-sidings-500x500.jpg",
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source: "https://www.whatisvinyl.com/wp-content/uploads/2021/08/What-Is-Vinyl-Siding-Made-of.jpg",
+    source:
+      "https://www.whatisvinyl.com/wp-content/uploads/2021/08/What-Is-Vinyl-Siding-Made-of.jpg",
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
@@ -41,7 +43,8 @@ const data = [
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source: "https://jdhostetter.com/wp-content/uploads/Hire-Install-Your-House-Siding.jpg",
+    source:
+      "https://jdhostetter.com/wp-content/uploads/Hire-Install-Your-House-Siding.jpg",
     title: "Siding Installation Image of workers installing siding on a house.",
   },
 ];
@@ -81,10 +84,16 @@ export const ImageSwiper = () => {
         })}
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <FiArrowLeft color="#fff" size={30} />
+            <FiArrowLeft
+              color={"#bd9546", "#e6d48a", "#deb750"}
+              size={30}
+            />
           </div>
           <div className="swiper-button-next slider-arrow">
-            <FiArrowRight color="#fff" size={30} />
+            <FiArrowRight 
+              color={"#bd9546", "#e6d48a", "#deb750"}
+              size={30} 
+            />
           </div>
           <div className="swiper-pagination"></div>
         </div>

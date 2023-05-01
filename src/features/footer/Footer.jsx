@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import { Link } from "react-scroll";
 import "./style.scss";
 import { BsFacebook } from "react-icons/bs";

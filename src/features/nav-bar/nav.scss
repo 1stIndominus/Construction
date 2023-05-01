@@ -45,7 +45,7 @@
   &__logo {
     display: flex;
     align-items: center;
-  
+
     background-image: url(../../assets/icons/gold-logo.png);
     background-repeat: no-repeat;
     width: 80px;
@@ -73,7 +73,7 @@
 .burger-bar {
   width: 2.5em;
   height: 0.4em;
-  background-color: var(--secondary-color);
+  background: var(--gradient);
   border-radius: 0.5em;
   margin-top: 3px;
 }
@@ -102,22 +102,31 @@
 
   &__text {
     color: #fff;
+    position: relative;
     cursor: pointer;
     font-size: 24px;
-    transition: 0.5s;
+    transition: 0.8s;
     opacity: 0.8;
 
     &:hover {
-      opacity: 1;
-      transition: 0.5s;
+      transition: 0.8s;
       padding-bottom: 12px;
-      border-bottom: 3px solid var(--secondary-color);
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+      }
     }
   }
 }
 
 .burger-bar.clicked:nth-child(1) {
-  transform: rotate(45deg) translate(0.70em, 0.7em);
+  transform: rotate(45deg) translate(0.7em, 0.7em);
   transition: ease-out 0.5s;
 }
 
@@ -157,16 +166,24 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    position: relative;
     background-color: transparent;
     transition: 0.5s;
     opacity: 0.8;
     text-decoration: none;
 
     &:hover {
-      opacity: 1;
       transition: 0.5s;
       padding-bottom: 12px;
-      border-bottom: 3px solid var(--secondary-color);
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+      }
     }
   }
 }
