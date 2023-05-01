@@ -11,7 +11,6 @@ export const About = () => {
         </div>
         <div className="about__content">
           <h1 className="about__content--title">About</h1>
-          {/* <span className="about__content--line"></span> */}
           <p className="about__content--description">
             Are you looking to renovate your home? AllBuild Homes is here to
             help you transform your house into a stunning masterpiece. We

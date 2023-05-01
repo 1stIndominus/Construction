@@ -1,0 +1,116 @@
+@import "../../utils/mixins";
+
+.container {
+  width: 100%;
+  margin: 100px auto 0;
+}
+
+.heading {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+
+  @include onTablet {
+    font-size: 3.5rem;
+  }
+}
+
+.image__title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.swiper_container {
+  height: 47rem;
+  // padding: 2rem 0;
+  position: relative;
+
+  @include onTablet {
+    height: 52rem;
+    // padding: 2rem 0;
+  }
+
+  @include onDesktop {
+    height: 58rem;
+    // padding: 2rem 0;
+  }
+}
+
+.swiper-slide {
+  margin-top: 100px;
+  width: 28rem !important;
+  height: 36rem !important;
+  position: relative;
+
+  @include onTablet {
+    width: 37rem;
+    height: 42rem;
+  }
+}
+
+.swiper-slide img {
+  width: 90%;
+  height: 28rem;
+  border-radius: 2rem;
+  padding: 22px;
+  object-fit: cover;
+
+  @include onTablet {
+    width: 28rem;
+    padding: 0;
+    height: 36rem;
+    border-radius: 1rem;
+  }
+}
+
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next {
+  left: 80% !important;
+  transform: translateX(-80%) !important;
+
+  @include onTablet {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+.swiper-button-prev {
+  left: 20% !important;
+  transform: translateX(-20%) !important;
+  @include onTablet {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+.slider-arrow {
+  background: transparent;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+}
+
+.slider-controler .slider-arrow::after {
+  content: "";
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}

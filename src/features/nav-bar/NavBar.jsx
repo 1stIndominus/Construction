@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import { Link } from "react-scroll";
 import "./nav.scss";
 import { MyProvider } from "../../helpers/ContextMenu";
+import { BurgerMenu } from "./BurgerMenu";
 
 export const NavBar = () => {
   const { show, toggle } = useContext(MyProvider);
 
   return (
+    <>
     <header className="header">
       <nav className="nav">
         <div className="nav__content">
@@ -75,5 +77,9 @@ export const NavBar = () => {
         </div>
       </nav>
     </header>
+    {show && (
+      <BurgerMenu />
+    )}
+    </>
   );
 };

@@ -57,6 +57,7 @@
     &:before {
       content: attr(data-text);
       position: absolute;
+      background-color: transparent;
       color: #fff;
       width: 100px;
       overflow: hidden;

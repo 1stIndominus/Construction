@@ -1,21 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./homescreen.scss";
 import { NavBar } from "../../features/nav-bar/NavBar";
 import { Footer } from "../../features/footer/Footer";
 import { Preview } from "../../features/preview/Preview";
 import { About } from "../../features/about/About";
-import { MyProvider } from "../../helpers/ContextMenu";
-import { BurgerMenu } from "../../features/nav-bar/BurgerMenu";
+import { ImageSwiper } from "../../features/swiper/ImageSwiper";
 
 export function HomeScreen() {
-  const { show } = useContext(MyProvider);
   return (
     <div className="main__container">
       <NavBar />
-      {show && (
-        <BurgerMenu />
-      )}
       <Preview />
+      <ImageSwiper />
       <About />
       <Footer />
     </div>
