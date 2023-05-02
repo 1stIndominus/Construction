@@ -122,6 +122,14 @@
   transform: translateX(-42%);
 }
 
+// .slider-controler {
+//   display: none;
+
+//   @include onTablet {
+//     display: flex;
+//   }
+// }
+
 .slider-controler .slider-arrow::after {
   content: "";
 }

@@ -11,8 +11,8 @@ export function HomeScreen() {
     <div className="main__container">
       <NavBar />
       <Preview />
-      <ImageSwiper />
       <About />
+      <ImageSwiper />
       <Footer />
     </div>
   );
