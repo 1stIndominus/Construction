@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/Construction/static/css/main.933c3b6e.css",
-    "main.js": "/Construction/static/js/main.a2fd9c1d.js",
-    "static/media/3.jpg": "/Construction/static/media/3.c063163e38e36130a006.jpg",
-    "static/media/1.jpg": "/Construction/static/media/1.e845ebf7bd5168f5d896.jpg",
-    "static/media/4.jpg": "/Construction/static/media/4.8e2140605fd7d5798d2b.jpg",
-    "static/media/5.jpg": "/Construction/static/media/5.f58f811e35851c0bfbe8.jpg",
-    "static/media/6.jpg": "/Construction/static/media/6.3c7ffaaa3c9ff3fe0cc2.jpg",
-    "static/media/2.jpg": "/Construction/static/media/2.bfcae1a098d32df3abed.jpg",
+    "main.css": "/Construction/static/css/main.8afa3feb.css",
+    "main.js": "/Construction/static/js/main.e41f22b9.js",
     "static/media/gold-logo.png": "/Construction/static/media/gold-logo.37c015884fdda9186fc1.png",
     "static/media/hero.jpg": "/Construction/static/media/hero.8562676a6412e9ec4644.jpg",
     "static/media/SourceSansPro-Regular.ttf": "/Construction/static/media/SourceSansPro-Regular.a5357cc4e5d4eeb42793.ttf",
     "static/media/vitaliy.jpg": "/Construction/static/media/vitaliy.0312e6940132ae1b4620.jpg",
     "static/media/CastoroTitling-Regular.ttf": "/Construction/static/media/CastoroTitling-Regular.baead5ee069318eedb41.ttf",
     "index.html": "/Construction/index.html",
-    "main.933c3b6e.css.map": "/Construction/static/css/main.933c3b6e.css.map",
-    "main.a2fd9c1d.js.map": "/Construction/static/js/main.a2fd9c1d.js.map"
+    "main.8afa3feb.css.map": "/Construction/static/css/main.8afa3feb.css.map",
+    "main.e41f22b9.js.map": "/Construction/static/js/main.e41f22b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.933c3b6e.css",
-    "static/js/main.a2fd9c1d.js"
+    "static/css/main.8afa3feb.css",
+    "static/js/main.e41f22b9.js"
   ]
 }
