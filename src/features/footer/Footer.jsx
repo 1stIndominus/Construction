@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import "./footer.scss";
 import { BsFacebook } from "react-icons/bs";
