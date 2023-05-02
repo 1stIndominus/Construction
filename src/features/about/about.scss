@@ -2,12 +2,7 @@
 @import '../../utils/mixins.scss';
 
 .about {
-  margin: 100px auto;
-
-  @include onAverage {
-    margin: 150px auto 0;
-    height: 50vh;
-  }
+  margin: 0 auto;
 
   &__container {
     width: 100%;
@@ -100,7 +95,10 @@
       }
 
       &-highlight {
-        color: var(--secondary-dark);
+        background: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
       }
     }
 

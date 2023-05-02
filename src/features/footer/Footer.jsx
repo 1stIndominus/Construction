@@ -1,9 +1,9 @@
 import React, { useState} from "react";
 import { Link } from "react-scroll";
-import "./style.scss";
+import "./footer.scss";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import { FiMail } from "react-icons/fi";
+import { BsEnvelope } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
 
 export const Footer = () => {
@@ -26,7 +26,6 @@ export const Footer = () => {
             >
               <BsFacebook
                 size={24}
-                color={"#fff"}
                 className="social__list--icon"
               />
             </a>
@@ -40,7 +39,6 @@ export const Footer = () => {
             >
               <BsInstagram
                 size={24}
-                color={"#fff"}
                 className="social__list--icon"
               />
             </a>
@@ -52,7 +50,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FiMail size={24} color={"#fff"} className="social__list--icon" />
+              <BsEnvelope size={24}className="social__list--icon" />
             </a>
           </li>
           <li className="social__list--item">
@@ -64,7 +62,6 @@ export const Footer = () => {
             >
               <BsTelegram
                 size={24}
-                color={"#fff"}
                 className="social__list--icon"
               />
             </a>

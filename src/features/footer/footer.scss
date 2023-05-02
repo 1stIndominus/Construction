@@ -48,11 +48,13 @@
   }
 
   &--icon {
-    transition: 0.5s;
+    fill: #fff !important;
+    transition: 0.5s ease; 
 
     &:hover {
-      transform: translateY(-10px);
-      color: var(--secondary-color) !important;
+      transform: scale(1.3);
+      transition: 0.5s ease; 
+      fill: #deb750 !important;
     }
   }
 
