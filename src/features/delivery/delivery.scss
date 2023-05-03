@@ -1,0 +1,38 @@
+.delivery {
+  position: relative;
+  height: 0;
+  width: 200px;
+  border-bottom: 1000px solid #deb750;
+  // border-top-right-radius: 35px;
+  // border-top-left-radius: 35px;
+  border-bottom-left-radius: 50px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  transform: rotate(-90deg);
+  margin: 0 auto;
+}
+
+.bubble {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.8;
+  z-index: 11;
+
+  &:nth-child(1) {
+    top: 20%;
+    left: 20%;
+  }
+
+  &:nth-child(2) {
+    top: 50%;
+    left: 60%;
+  }
+
+  &:nth-child(3) {
+    top: 80%;
+    left: 30%;
+  }
+}
