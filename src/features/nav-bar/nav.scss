@@ -6,12 +6,12 @@
   position: fixed;
   height: 90px;
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
+  max-width: 1600px;
+  margin: 0 auto;
   top: 0;
   z-index: 11;
   transition: 0.3s ease-in;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: var(--total-black);
 }
 

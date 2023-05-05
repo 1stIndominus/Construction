@@ -1,5 +1,6 @@
 import React from "react";
 import "./demo.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const DemoSection = () => {
   return (
@@ -17,16 +18,15 @@ export const DemoSection = () => {
           {/* <button className="button">Get your free financial analysis</button> */}
         </div>
         <div className="demo__video">
-          <iframe
-            className="demo__video--player"
-            width="320"
-            height="250"
-            src="https://www.youtube.com/embed/oeqP5JtihMA"
-            title="Youtube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <div class="ratio ratio-4x3">
+            <iframe
+              src="https://www.youtube.com/embed/0aUav1lx3rA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
