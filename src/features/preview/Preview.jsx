@@ -74,7 +74,7 @@ export const Preview = () => {
               placeholder="Write here..."
               name="input"
               class="coolinput__input"
-              onChange={(value) => handleName(value)}
+              onChange={(event) => setUserName(event.target.value)}
             />
           </div>
           <div class="coolinput">
@@ -86,7 +86,7 @@ export const Preview = () => {
               placeholder="Write here..."
               name="input"
               class="coolinput__input"
-              onChange={(value) => handleEmail(value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <div class="coolinput">
@@ -98,7 +98,7 @@ export const Preview = () => {
               placeholder="Write here..."
               name="input"
               class="coolinput__input--textarea"
-              onChange={(value) => handleQuestion(value)}
+              onChange={(event) => setQuestion(event.target.value)}
             />
           </div>
           <button onSubmit={handleSubmit} className="hero__button">
