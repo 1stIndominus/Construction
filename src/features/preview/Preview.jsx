@@ -1,20 +1,31 @@
 import React, { useState } from "react";
 import "./preview.scss";
-// import axios from 'axios';
-
+import { nameValidationField, emailValidationField } from "../../helpers/validationForm";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [question, setQuestion] = useState("");
 
+  const isNameValid = nameValidationField(userName);
+  const isEmailValid = emailValidationField(email);
+
+  console.log(isEmailValid)
+
   const TELEGRAM_TOKEN = "6101425309:AAHK9A_49b2tMjgjqCA2Xp8N7feCcy1nIKA";
   const TELEGRAM_CHAT_ID = "-1001874127252";
   const URI_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+  const USER_DATA_MESSAGE = `UserName: ${userName}\nEmail: ${email}\nQuestion: ${question}`;
+
+  const resetFields = () => {
+    setUserName("");
+    setEmail("");
+    setQuestion("");
+  };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
     try {
+      event.preventDefault();
       const response = await fetch(URI_API, {
         method: "POST",
         headers: {
@@ -23,7 +34,7 @@ export const Preview = () => {
         body: JSON.stringify({
           chat_id: TELEGRAM_CHAT_ID,
           parse_mode: "html",
-          text: `UserName: ${userName}\nEmail: ${email}\nQuestion: ${question}`,
+          text: USER_DATA_MESSAGE,
         }),
       });
 
@@ -32,12 +43,18 @@ export const Preview = () => {
       }
 
       const data = await response.json();
-
       console.log(data);
+
+      resetFields();
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      resetFields();
     }
   };
+
+  const DISABLE_BUTTON = !userName.length || !email.length || !question.length || isNameValid !== 'Verified' || isEmailValid !== 'Verified';
+
   return (
     <div className="hero" id="Home">
       <div className="hero__content">
@@ -49,12 +66,8 @@ export const Preview = () => {
         <p className="hero__description">
           Expert Construction Services and Solutions
         </p>
-        {/* <div className="hero__button">
-          <a href="tel:+1 208-966-1947" className="hero__button--text">
-            Free Consultation
-          </a>
-        </div> */}
-        <form onSubmit={event => handleSubmit(event)}>
+
+        <form onSubmit={(event) => handleSubmit(event)}>
           <div class="coolinput">
             <label for="inputField" class="coolinput__text">
               Name
@@ -92,7 +105,11 @@ export const Preview = () => {
               onChange={(event) => setQuestion(event.target.value)}
             />
           </div>
-          <button onSubmit={handleSubmit} className="hero__button">
+          <button
+            disabled={DISABLE_BUTTON}
+            type="submit"
+            className="hero__button"
+          >
             <span className="hero__button--text">Send</span>
           </button>
         </form>
