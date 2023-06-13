@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./preview.scss";
+// import axios from 'axios';
+
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -10,19 +12,8 @@ export const Preview = () => {
   const TELEGRAM_CHAT_ID = "-1001874127252";
   const URI_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
-  const handleName = (event) => {
-    setUserName(event.target.value);
-  };
-
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleQuestion = (event) => {
-    setQuestion(event.target.value);
-  };
-
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     try {
       const response = await fetch(URI_API, {
         method: "POST",
@@ -63,7 +54,7 @@ export const Preview = () => {
             Free Consultation
           </a>
         </div> */}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={event => handleSubmit(event)}>
           <div class="coolinput">
             <label for="inputField" class="coolinput__text">
               Name
