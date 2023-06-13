@@ -95,14 +95,15 @@
     margin: 1rem 0;
     height: 40px;
     border-radius: 6px;
-    width: max-content;
+    width: 240px;
     background: var(--gradient);
     border: 1px solid var(--gradient);
     align-items: center;
     opacity: 0.8;
+    justify-content: center;
 
     @include onTablet {
-      height: 60px;
+      height: 40px;
     }
 
     &--text {
@@ -115,12 +116,68 @@
       @include onTablet {
         font-size: 24px;
       }
+
+      &:hover {
+        color: #000 !important;
+        cursor: pointer;
+      }
     }
 
     &:hover {
       opacity: 1;
       background: var(--gradient);
       border: 1px solid var(--gradient);
+      cursor: pointer;
+    }
+  }
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  // width: fit-content;
+  position: static;
+  // width: 240px;
+
+  &__text {
+    font-size: 0.75rem;
+    color: var(--secondary-dark);
+    font-weight: 700;
+    position: relative;
+    top: 0.10rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: unset;
+    width: fit-content;
+  }
+
+  &__input {
+    height: 40px;
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px var(--secondary-dark) solid;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    width: 240px;
+
+    &--textarea {
+      height: 80px;
+      padding: 11px 10px;
+      font-size: 0.75rem;
+      border: 2px var(--secondary-dark) solid;
+      border-radius: 5px;
+      background: transparent;
+      color: #fff;
+      width: 240px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
