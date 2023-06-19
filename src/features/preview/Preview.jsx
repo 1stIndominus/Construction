@@ -25,7 +25,7 @@ export const Preview = () => {
 
   const handleSubmit = async (event) => {
     try {
-      event.preventDefault();
+      // event.preventDefault();
       const response = await fetch(URI_API, {
         method: "POST",
         headers: {
