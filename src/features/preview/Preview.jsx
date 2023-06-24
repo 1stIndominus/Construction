@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./preview.scss";
-import { nameValidationField, emailValidationField } from "../../helpers/validationForm";
-import Axios from 'axios';
+import {
+  nameValidationField,
+  emailValidationField,
+} from "../../helpers/validationForm";
+import Axios from "axios";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -11,7 +14,7 @@ export const Preview = () => {
   const isNameValid = nameValidationField(userName);
   const isEmailValid = emailValidationField(email);
 
-  console.log(isEmailValid)
+  console.log(isEmailValid);
 
   const TELEGRAM_TOKEN = "6101425309:AAHK9A_49b2tMjgjqCA2Xp8N7feCcy1nIKA";
   const TELEGRAM_CHAT_ID = "-1001874127252";
@@ -27,18 +30,18 @@ export const Preview = () => {
   const handleSubmit = (event) => {
     try {
       event.preventDefault();
-      
+
       Axios.post(URI_API, {
         chat_id: TELEGRAM_CHAT_ID,
-        parse_mode: 'html',
-        text: USER_DATA_MESSAGE
-      })
+        parse_mode: "html",
+        text: USER_DATA_MESSAGE,
+      });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     } finally {
       resetFields();
     }
-  }
+  };
 
   // const handleSubmit = async (event) => {
   //   try {
@@ -70,7 +73,12 @@ export const Preview = () => {
   //   }
   // };
 
-  const DISABLE_BUTTON = !userName.length || !email.length || !question.length || isNameValid !== 'Verified' || isEmailValid !== 'Verified';
+  const DISABLE_BUTTON =
+    !userName.length ||
+    !email.length ||
+    !question.length ||
+    isNameValid !== "Verified" ||
+    isEmailValid !== "Verified";
 
   return (
     <div className="hero" id="Home">
@@ -84,44 +92,47 @@ export const Preview = () => {
           Expert Construction Services and Solutions
         </p>
 
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form
+          onSubmit={(event) => handleSubmit(event)}
+          className="coolinput__container"
+        >
           <div class="coolinput">
-            <label for="inputField" class="coolinput__text">
+            <label for="inputField" className="coolinput__text">
               Name
             </label>
             <input
               type="text"
               id="inputField"
               value={userName}
-              placeholder="Write here..."
+              placeholder="Type your Name"
               name="input"
-              class="coolinput__input"
+              className="coolinput__input"
               onChange={(event) => setUserName(event.target.value)}
             />
           </div>
-          <div class="coolinput">
-            <label for="input" class="coolinput__text">
+          <div className="coolinput">
+            <label for="input" className="coolinput__text">
               Email
             </label>
             <input
               type="text"
               value={email}
-              placeholder="Write here..."
+              placeholder="Type your Email"
               name="input"
-              class="coolinput__input"
+              className="coolinput__input"
               onChange={(event) => setEmail(event.target.value)}
             />
           </div>
-          <div class="coolinput">
-            <label for="input" class="coolinput__text">
+          <div className="coolinput">
+            <label for="input" className="coolinput__text">
               Question
             </label>
             <textarea
               type="text"
               value={question}
-              placeholder="Write here..."
+              placeholder="Type your Question"
               name="input"
-              class="coolinput__input--textarea"
+              className="coolinput__input--textarea"
               onChange={(event) => setQuestion(event.target.value)}
             />
           </div>

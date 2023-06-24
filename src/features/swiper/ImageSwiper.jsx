@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 
 export const ImageSwiper = () => {
   return (
-    <div className="container">
+    <div className="container" id="swiper">
       <h1 className="heading">Our Works</h1>
       <Swiper
         effect={"coverflow"}
@@ -36,13 +36,13 @@ export const ImageSwiper = () => {
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
+        className="swiper__container"
       >
-        {workingImages.map((image) => {
+        {workingImages.map(({ source, title }) => {
           return (
             <SwiperSlide>
-              <img src={image.source} alt="slide_image" />
-              <div className="image__title">{image.title}</div>
+              <img src={source} alt="slide_image" />
+              <div className="image__title">{title}</div>
             </SwiperSlide>
           );
         })}

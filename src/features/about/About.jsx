@@ -1,6 +1,7 @@
 import React from "react";
-import house from "../../assets/images/vitaliy.jpg";
+import house from "../../assets/homes/23.jpg";
 import "./about.scss";
+import { Link } from "react-scroll";
 
 export const About = () => {
   return (
@@ -25,7 +26,16 @@ export const About = () => {
             : Quality construction & remodeling, expertly installed siding, soffit, windows,
             and doors. Headed by experienced builder Vitaliy Radchuk.
           </p>
-          <button className="about__content--button">Explore More</button>
+          <Link
+            to="swiper"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+            className="about__content--button"
+          >
+            Explore More
+          </Link>
         </div>
       </div>
     </div>

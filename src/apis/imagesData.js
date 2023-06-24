@@ -1,31 +1,102 @@
 export const workingImages = [
   {
-    source:
-      "https://www.bankrate.com/2020/01/31131553/How-much-does-vinyl-siding-cos.jpg?auto=webp&optimize=high&crop=16:9",
+    source: require("../assets/homes/1.jpg"),
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source:
-      "https://www.thespruce.com/thmb/4gkAizJvX1g1I2wO8-IfuYRweh8=/7952x0/filters:no_upscale():max_bytes(150000):strip_icc()/cons-of-vinyl-house-siding-1821806-hero-eb2d947c35f34305bdb3305d2e3c8225.jpg",
+    source: require("../assets/homes/2.jpg"),
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source:
-      "https://5.imimg.com/data5/DC/II/FU/SELLER-5079754/vinyl-sidings-500x500.jpg",
+    source: require("../assets/homes/3.jpg"),
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source:
-      "https://www.whatisvinyl.com/wp-content/uploads/2021/08/What-Is-Vinyl-Siding-Made-of.jpg",
+    source: require("../assets/homes/4.jpg"),
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source: "https://www.whatisvinyl.com/wp-content/uploads/2021/08/What-Is-Vinyl-Siding-Made-of.jpg",
+    source: require("../assets/homes/5.jpg"),
     title: "Siding Installation Image of workers installing siding on a house.",
   },
   {
-    source:
-      "https://jdhostetter.com/wp-content/uploads/Hire-Install-Your-House-Siding.jpg",
+    source: require("../assets/homes/7.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/8.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/9.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/10.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/11.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/12.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/13.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/14.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/15.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/16.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/17.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/18.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/19.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/20.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/21.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/22.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/23.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/24.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/25.jpg"),
+    title: "Siding Installation Image of workers installing siding on a house.",
+  },
+  {
+    source: require("../assets/homes/26.jpg"),
     title: "Siding Installation Image of workers installing siding on a house.",
   },
 ];
