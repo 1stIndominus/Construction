@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./preview.scss";
 import { nameValidationField, emailValidationField } from "../../helpers/validationForm";
+import Axios from 'axios';
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -23,35 +24,51 @@ export const Preview = () => {
     setQuestion("");
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     try {
-      // event.preventDefault();
-      const response = await fetch(URI_API, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          parse_mode: "html",
-          text: USER_DATA_MESSAGE,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const data = await response.json();
-      console.log(data);
-
-      resetFields();
+      event.preventDefault();
+      
+      Axios.post(URI_API, {
+        chat_id: TELEGRAM_CHAT_ID,
+        parse_mode: 'html',
+        text: USER_DATA_MESSAGE
+      })
     } catch (error) {
-      console.error("Error:", error);
+      console.log(error)
     } finally {
       resetFields();
     }
-  };
+  }
+
+  // const handleSubmit = async (event) => {
+  //   try {
+  //     event.preventDefault();
+  //     const response = await fetch(URI_API, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         chat_id: TELEGRAM_CHAT_ID,
+  //         parse_mode: "html",
+  //         text: USER_DATA_MESSAGE,
+  //       }),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
+
+  //     const data = await response.json();
+  //     console.log(data);
+
+  //     resetFields();
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   } finally {
+  //     resetFields();
+  //   }
+  // };
 
   const DISABLE_BUTTON = !userName.length || !email.length || !question.length || isNameValid !== 'Verified' || isEmailValid !== 'Verified';
 
@@ -75,6 +92,7 @@ export const Preview = () => {
             <input
               type="text"
               id="inputField"
+              value={userName}
               placeholder="Write here..."
               name="input"
               class="coolinput__input"
@@ -87,6 +105,7 @@ export const Preview = () => {
             </label>
             <input
               type="text"
+              value={email}
               placeholder="Write here..."
               name="input"
               class="coolinput__input"
@@ -99,6 +118,7 @@ export const Preview = () => {
             </label>
             <textarea
               type="text"
+              value={question}
               placeholder="Write here..."
               name="input"
               class="coolinput__input--textarea"
