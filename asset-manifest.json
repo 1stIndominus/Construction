@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Construction/static/css/main.07ee4a36.css",
-    "main.js": "/Construction/static/js/main.b50c1366.js",
+    "main.css": "/Construction/static/css/main.9c3b4f61.css",
+    "main.js": "/Construction/static/js/main.c02ba736.js",
     "static/media/17.jpg": "/Construction/static/media/17.c20e4388a29ee4e240bc.jpg",
     "static/media/13.jpg": "/Construction/static/media/13.1145d38346ae2184e6f4.jpg",
     "static/media/10.jpg": "/Construction/static/media/10.68b63a8af8c22e938f37.jpg",
@@ -32,11 +32,11 @@
     "static/media/SourceSansPro-Regular.ttf": "/Construction/static/media/SourceSansPro-Regular.a5357cc4e5d4eeb42793.ttf",
     "static/media/CastoroTitling-Regular.ttf": "/Construction/static/media/CastoroTitling-Regular.baead5ee069318eedb41.ttf",
     "index.html": "/Construction/index.html",
-    "main.07ee4a36.css.map": "/Construction/static/css/main.07ee4a36.css.map",
-    "main.b50c1366.js.map": "/Construction/static/js/main.b50c1366.js.map"
+    "main.9c3b4f61.css.map": "/Construction/static/css/main.9c3b4f61.css.map",
+    "main.c02ba736.js.map": "/Construction/static/js/main.c02ba736.js.map"
   },
   "entrypoints": [
-    "static/css/main.07ee4a36.css",
-    "static/js/main.b50c1366.js"
+    "static/css/main.9c3b4f61.css",
+    "static/js/main.c02ba736.js"
   ]
 }
