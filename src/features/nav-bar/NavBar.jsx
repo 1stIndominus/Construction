@@ -40,10 +40,10 @@ export const NavBar = () => {
             </li>
             <li className="navigation__list">
               <Link
-                to="Services"
+                to="swiper"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-150}
                 duration={500}
                 className="navigation__item"
               >

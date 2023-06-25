@@ -37,7 +37,7 @@ export const BurgerMenu = () => {
         </li>
         <li className="burger__item">
           <Link
-            to="Services"
+            to="swiper"
             spy={true}
             smooth={true}
             offset={50}
