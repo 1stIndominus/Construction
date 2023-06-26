@@ -168,6 +168,25 @@
     color: #fff;
     width: 100%;
 
+    &--error {
+      height: 40px;
+      padding: 11px 10px;
+      font-size: 0.75rem;
+      border: 2px var(--error) solid;
+      border-radius: 5px;
+      background: transparent;
+      color: #fff;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include onTablet {
+        width: 240px;
+      }
+    }
+
     @include onTablet {
       width: 240px;
     }
@@ -180,6 +199,24 @@
       border-radius: 5px;
       background: transparent;
       color: #fff;
+
+      &-error {
+        height: 80px;
+        padding: 11px 10px;
+        font-size: 0.75rem;
+        border: 2px var(--error) solid;
+        border-radius: 5px;
+        background: transparent;
+        color: #fff;
+
+        &:focus {
+          outline: none;
+        }
+
+        @include onTablet {
+          width: 240px;
+        }
+      }
 
       @include onTablet {
         width: 240px;
@@ -196,7 +233,7 @@
   }
 
   &__error {
-    color: red;
+    color: var(--error);
     font-size: 10px;
     margin-left: 10px;
   }

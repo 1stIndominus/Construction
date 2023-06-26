@@ -3,9 +3,11 @@ import "./preview.scss";
 import {
   nameValidationField,
   emailValidationField,
+  textAreaValidation,
 } from "../../helpers/validationForm";
 import { NAME_ERROR, EMAIL_ERROR } from "../../helpers/constants";
 import { postDataFromInputsToTelegram } from "../../apis/fetchData";
+import { VERIFIED, QUESTION_ERROR } from "../../helpers/constants";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -14,6 +16,11 @@ export const Preview = () => {
 
   const isNameValid = nameValidationField(userName);
   const isEmailValid = emailValidationField(email);
+  const isQuestionValid = textAreaValidation(question);
+
+  const isNameErrorVisible = isNameValid !== VERIFIED && userName.length > 1;
+  const isEmailErrorVisible = isEmailValid !== VERIFIED && email.length > 3;
+  const isTextAreaErrorVisible = isQuestionValid !== VERIFIED && question.length > 5;
 
   const resetFields = () => {
     setUserName("");
@@ -22,7 +29,7 @@ export const Preview = () => {
   };
 
   const handleSubmit = (event) => {
-    postDataFromInputsToTelegram(event, userName, email, question)
+    postDataFromInputsToTelegram(event, userName, email, question);
     resetFields();
   };
 
@@ -33,14 +40,17 @@ export const Preview = () => {
     if (errorType === EMAIL_ERROR) {
       return <div class="coolinput__error">{isEmailValid}</div>;
     }
+    if (errorType === QUESTION_ERROR) {
+      return <div class="coolinput__error">{isQuestionValid}</div>;
+    }
   };
 
   const DISABLE_BUTTON =
     !userName.length ||
     !email.length ||
-    !question.length ||
-    isNameValid !== "Verified" ||
-    isEmailValid !== "Verified";
+    question.length < 20 ||
+    isNameValid !== VERIFIED ||
+    isEmailValid !== VERIFIED;
 
   return (
     <div className="hero" id="Home">
@@ -68,10 +78,14 @@ export const Preview = () => {
               value={userName}
               placeholder="Type your Name"
               name="input"
-              className="coolinput__input"
+              className={
+                isNameErrorVisible
+                  ? "coolinput__input--error"
+                  : "coolinput__input"
+              }
               onChange={(event) => setUserName(event.target.value)}
             />
-            {isNameValid !== "Verified" && _renderErrorText(NAME_ERROR)}
+            {isNameErrorVisible && _renderErrorText(NAME_ERROR)}
           </div>
           <div className="coolinput">
             <label for="input" className="coolinput__text">
@@ -82,10 +96,14 @@ export const Preview = () => {
               value={email}
               placeholder="Type your Email"
               name="input"
-              className="coolinput__input"
+              className={
+                isEmailErrorVisible
+                  ? "coolinput__input--error"
+                  : "coolinput__input"
+              }
               onChange={(event) => setEmail(event.target.value)}
             />
-            {isEmailValid !== "Verified" && _renderErrorText(EMAIL_ERROR)}
+            {isEmailErrorVisible && _renderErrorText(EMAIL_ERROR)}
           </div>
           <div className="coolinput">
             <label for="input" className="coolinput__text">
@@ -96,9 +114,14 @@ export const Preview = () => {
               value={question}
               placeholder="Type your Question"
               name="input"
-              className="coolinput__input--textarea"
+              className={
+                isTextAreaErrorVisible
+                  ? "coolinput__input--textarea-error"
+                  : "coolinput__input--textarea"
+              }
               onChange={(event) => setQuestion(event.target.value)}
             />
+            {isTextAreaErrorVisible && _renderErrorText(QUESTION_ERROR)}
           </div>
           <button
             disabled={DISABLE_BUTTON}
