@@ -1,34 +1,85 @@
-import React from "react";
-import { FaConfluence } from "react-icons/fa";
-import { GiHouse } from "react-icons/gi";
+import React, { useContext } from "react";
+import { Link } from "react-scroll";
+import "./nav.scss";
+import { MyProvider } from "../../helpers/ContextMenu";
+import { BurgerMenu } from "./BurgerMenu";
 
-import "./style.scss";
-import { BiAlignRight } from "react-icons/bi";
 export const NavBar = () => {
+  const { show, toggle } = useContext(MyProvider);
+
   return (
-    <div className="header">
+    <>
+    <header className="header">
       <nav className="nav">
         <div className="nav__content">
-          <button className="nav__content--logo">
-            <div className="logo">
-              <p className="nav__content--title">V.</p>
-              {/* <GiHouse color="#fff" size={20} /> */}
-              <div className="logo__image"></div>
-              <p className="nav__content--title">Wallco</p>
-            </div>
-            <p className="nav__content--title--small">Homes</p>
-          </button>
-          <div className="nav__content--details">
-            <button className="nav__button">Home</button>
-            <button className="nav__button">About us</button>
-            <button className="nav__button">Services</button>
-            <button className="nav__button">Contacts</button>
+          <div className="nav__logo"></div>
+          <ul className="navigation">
+            <li className="navigation__list">
+              <Link
+                to="Home"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                className="navigation__item"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="navigation__list">
+              <Link
+                to="About"
+                spy={true}
+                smooth={true}
+                offset={-110}
+                duration={500}
+                className="navigation__item"
+              >
+                About us
+              </Link>
+            </li>
+            <li className="navigation__list">
+              <Link
+                to="swiper"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                className="navigation__item"
+              >
+                Services
+              </Link>
+            </li>
+            <li className="navigation__list">
+              <Link
+                to="Contacts"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="navigation__item"
+              >
+                Contacts
+              </Link>
+            </li>
+          </ul>
+          <div className="burger-menu" onClick={toggle}>
+            <div
+              className={show ? "burger-bar clicked" : "burger-bar unclicked"}
+            ></div>
+            <div
+              className={show ? "burger-bar clicked" : "burger-bar unclicked"}
+            ></div>
+            <div
+              className={show ? "burger-bar clicked" : "burger-bar unclicked"}
+            ></div>
           </div>
-          <button className="nav__content--burger">
-            <BiAlignRight color="#fff" size={24} />
-          </button>
         </div>
       </nav>
-    </div>
+    </header>
+    {show && (
+      <BurgerMenu />
+    )}
+    </>
   );
 };

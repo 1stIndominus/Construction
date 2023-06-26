@@ -1,0 +1,190 @@
+@import "../../utils/mixins";
+@import "../../utils/fonts";
+@import "../../utils/vars";
+
+.header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  top: 0;
+  z-index: 11;
+  transition: 0.3s ease-in;
+  // overflow: hidden;
+  background-color: var(--total-black);
+}
+
+.nav {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: var(--total-black);
+  align-items: center;
+  height: 100%;
+
+  @include onDesktop {
+    height: 100px;
+  }
+
+  &__content {
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    @include onDesktop {
+      padding: 0 30px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    background-image: url(../../assets/icons/gold-logo.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+  }
+}
+
+.burger-menu {
+  height: 100%;
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  display: flex;
+  z-index: 100;
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.burger-bar {
+  width: 2.5em;
+  height: 0.4em;
+  background: var(--gradient);
+  border-radius: 0.5em;
+  margin-top: 3px;
+}
+
+.burger {
+  width: 100%;
+  height: 300px;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 10;
+  background-color: var(--total-black);
+  transition: width 1s ease;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__item {
+    margin-top: 20px;
+  }
+
+  &__text {
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.8s;
+    text-decoration: none;
+    opacity: 0.8;
+
+    &:hover {
+      transition: 0.8s;
+      padding-bottom: 12px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+      }
+    }
+  }
+}
+
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.7em, 0.7em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.2em, 0.2em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.navigation {
+  display: none;
+  flex-direction: row;
+  list-style: none;
+  position: relative;
+  gap: 15px;
+
+  @include onTablet {
+    display: flex;
+  }
+
+  &__list {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__item {
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    transition: 0.5s;
+    opacity: 0.8;
+    text-decoration: none;
+
+    &:hover {
+      transition: 0.5s;
+      padding-bottom: 12px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+      }
+    }
+  }
+}

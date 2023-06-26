@@ -1,0 +1,95 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.demo {
+  margin: 100px auto;
+  width: 100%;
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    @include onAverage {
+      flex-direction: row;
+    }
+
+    @include onDesktop {
+      max-height: max-content;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    @include onAverage {
+      width: 45%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0 20px 0;
+
+    @include onTablet {
+      font-size: 1.6rem;
+    }
+
+    @include onDesktop {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 20px auto;
+
+    @include onTablet {
+      font-size: 2rem;
+    }
+
+    @include onDesktop {
+      font-size: 3rem;
+    }
+  }
+
+  &__paragraph {
+    color: #fff;
+    margin: 0 20px 0;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+
+    @include onTablet {
+      font-size: 1rem;
+    }
+
+    @include onDesktop {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__video {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    width: 90%;
+    height: max-content;
+    box-sizing: border-box;
+    @include onAverage {
+      width: 50%;
+    }
+    
+    @include onDesktop {
+      width: 40%;
+    }
+
+  }
+}
