@@ -24,3 +24,11 @@ export const emailValidationField = (userEmail) => {
     return 'Email is not valid'
   } 
 };
+
+export const textAreaValidation = (text) => {
+  if (text.length > 5 && text.length < 20) {
+    return 'At least 20 symbols'
+  } if (text.length >= 20) {
+    return 'Verified'
+  }
+}
