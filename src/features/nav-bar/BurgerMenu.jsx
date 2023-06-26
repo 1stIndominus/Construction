@@ -40,7 +40,7 @@ export const BurgerMenu = () => {
             to="swiper"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-150}
             duration={500}
             className="burger__text"
             onClick={() => setShow(false)}

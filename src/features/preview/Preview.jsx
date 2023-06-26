@@ -4,7 +4,8 @@ import {
   nameValidationField,
   emailValidationField,
 } from "../../helpers/validationForm";
-import Axios from "axios";
+import { NAME_ERROR, EMAIL_ERROR } from "../../helpers/constants";
+import { postDataFromInputsToTelegram } from "../../apis/fetchData";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -14,13 +15,6 @@ export const Preview = () => {
   const isNameValid = nameValidationField(userName);
   const isEmailValid = emailValidationField(email);
 
-  console.log(isEmailValid);
-
-  const TELEGRAM_TOKEN = "6101425309:AAHK9A_49b2tMjgjqCA2Xp8N7feCcy1nIKA";
-  const TELEGRAM_CHAT_ID = "-1001874127252";
-  const URI_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
-  const USER_DATA_MESSAGE = `UserName: ${userName}\nEmail: ${email}\nQuestion: ${question}`;
-
   const resetFields = () => {
     setUserName("");
     setEmail("");
@@ -28,50 +22,18 @@ export const Preview = () => {
   };
 
   const handleSubmit = (event) => {
-    try {
-      event.preventDefault();
-
-      Axios.post(URI_API, {
-        chat_id: TELEGRAM_CHAT_ID,
-        parse_mode: "html",
-        text: USER_DATA_MESSAGE,
-      });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      resetFields();
-    }
+    postDataFromInputsToTelegram(event, userName, email, question)
+    resetFields();
   };
 
-  // const handleSubmit = async (event) => {
-  //   try {
-  //     event.preventDefault();
-  //     const response = await fetch(URI_API, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         chat_id: TELEGRAM_CHAT_ID,
-  //         parse_mode: "html",
-  //         text: USER_DATA_MESSAGE,
-  //       }),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error("Network response was not ok");
-  //     }
-
-  //     const data = await response.json();
-  //     console.log(data);
-
-  //     resetFields();
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   } finally {
-  //     resetFields();
-  //   }
-  // };
+  const _renderErrorText = (errorType) => {
+    if (errorType === NAME_ERROR) {
+      return <div class="coolinput__error">{isNameValid}</div>;
+    }
+    if (errorType === EMAIL_ERROR) {
+      return <div class="coolinput__error">{isEmailValid}</div>;
+    }
+  };
 
   const DISABLE_BUTTON =
     !userName.length ||
@@ -83,8 +45,8 @@ export const Preview = () => {
   return (
     <div className="hero" id="Home">
       <div className="hero__content">
-        <p className="hero__title">Call us</p>
-        <p className="hero__number">+1 208-966-1947</p>
+        {/* <p className="hero__title">Call us</p>
+        <p className="hero__number">+1 208-966-1947</p> */}
         <p data-text="AllBuild Homes" className="hero__subtitle">
           AllBuild Homes
         </p>
@@ -109,6 +71,7 @@ export const Preview = () => {
               className="coolinput__input"
               onChange={(event) => setUserName(event.target.value)}
             />
+            {isNameValid !== "Verified" && _renderErrorText(NAME_ERROR)}
           </div>
           <div className="coolinput">
             <label for="input" className="coolinput__text">
@@ -122,6 +85,7 @@ export const Preview = () => {
               className="coolinput__input"
               onChange={(event) => setEmail(event.target.value)}
             />
+            {isEmailValid !== "Verified" && _renderErrorText(EMAIL_ERROR)}
           </div>
           <div className="coolinput">
             <label for="input" className="coolinput__text">
