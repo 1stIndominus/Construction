@@ -5,6 +5,10 @@
   margin: 100px auto;
   width: 100%;
 
+  @include onTablet {
+    margin: 200px auto;
+  }
+
   &__container {
     margin: 0 auto;
     display: flex;

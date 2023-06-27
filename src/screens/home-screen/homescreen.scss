@@ -4,19 +4,9 @@
 .main__container {
   display: flex;
   flex-direction: column;
-  // background: linear-gradient(270deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.9) 100%);
-  // height: 100%;
-  // width: 100%;
-  margin: 0 auto;  
-  // max-width: 1440px;
-  
+  margin: 0 auto;    
 
   @include onDesktop {
     max-width: 1600px;
   }
 }
-
-// .image__wrapper {
-//   background-color: #fff;
-
-// }

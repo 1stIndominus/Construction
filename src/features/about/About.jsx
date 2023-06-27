@@ -13,7 +13,7 @@ export const About = () => {
         <div className="about__content">
           <h1 className="about__content--title">About</h1>
           <p className="about__content--description">
-            Are you looking to renovate your home? AllBuild Homes is here to
+            Are you looking to renovate your home? AllBuilt Homes is here to
             help you transform your house into a stunning masterpiece. We
             specialize in high-quality siding and soffit installations & remodeling that not
             only enhance the look of your home but also protect it from harsh
@@ -22,7 +22,7 @@ export const About = () => {
             perfection.
           </p>
           <p className="about__content--me">
-            <span className="about__content--me-highlight">AllBuild Homes</span>
+            <span className="about__content--me-highlight">AllBuilt Homes</span>
             : Quality construction & remodeling, expertly installed siding, soffit, windows,
             and doors. Headed by experienced builder Vitaliy Radchuk.
           </p>

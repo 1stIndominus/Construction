@@ -55,8 +55,6 @@
       transform: scale(1.3);
       transition: 0.5s ease; 
       fill: #deb750 !important;
-      // background: linear-gradient(25deg, #edd185 0%, #d1a568 15%);
-      // fill: linear-gradient(#bd9546, #e6d48a, #deb750) !important;
     }
   }
 
@@ -94,6 +92,7 @@
     &:hover {
       transition: 0.8s;
       padding-bottom: 12px;
+      cursor: pointer;
 
       &::after {
         content: "";

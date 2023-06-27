@@ -15,7 +15,6 @@ export const DemoSection = () => {
             research (including that of a Nobel laureate in Economics) and
             Behavioral Finance.
           </p>
-          {/* <button className="button">Get your free financial analysis</button> */}
         </div>
         <div className="demo__video">
           <div class="ratio ratio-4x3">
