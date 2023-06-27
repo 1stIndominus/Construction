@@ -14,9 +14,9 @@ export function HomeScreen() {
       <NavBar />
       <Preview />
       <About />
+      <DeliverySection />
       <DemoSection />
       <ImageSwiper />
-      {/* <DeliverySection /> */}
       <Footer />
     </div>
   );

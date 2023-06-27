@@ -94,10 +94,10 @@ export const Footer = () => {
           </li>
           <li className="menu__list">
             <Link
-              to="Services"
+              to="swiper"
               spy={true}
               smooth={true}
-              offset={50}
+              offset={-150}
               duration={500}
               className="menu__item"
             >

@@ -4,7 +4,12 @@ const TELEGRAM_TOKEN = "6101425309:AAHK9A_49b2tMjgjqCA2Xp8N7feCcy1nIKA";
 const TELEGRAM_CHAT_ID = "-1001874127252";
 const URI_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
-export const postDataFromInputsToTelegram = (event, userName, email, question) => {
+export const postDataFromInputsToTelegram = (
+  event,
+  userName,
+  email,
+  question
+) => {
   const USER_DATA_MESSAGE = `UserName: ${userName}\nEmail: ${email}\nQuestion: ${question}`;
 
   try {
@@ -18,4 +23,4 @@ export const postDataFromInputsToTelegram = (event, userName, email, question) =
   } catch (error) {
     console.log(error);
   }
-}
+};
