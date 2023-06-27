@@ -7,16 +7,17 @@
   &__content {
     display: flex;
     justify-content: center;
-    border-top-right-radius: 40px;
     align-items: center;
-    background: url("../../assets/images/abstract.jpg") center center/cover
+    background: url("../../assets/images/wood-deck2.jpg") center center/cover
       no-repeat;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 89%);
+    clip-path: polygon(0 12%, 100% 4%, 100% 94%, 0 89%);
     height: 300px;
+    opacity: 1;
     margin-top: 50px;
 
     @include onTablet {
       margin-top: 100px;
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 89%);
     }
 
     &--text {

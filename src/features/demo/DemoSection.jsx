@@ -7,24 +7,27 @@ export const DemoSection = () => {
     <div className="demo" id="demo">
       <div className="demo__container">
         <div className="demo__info">
-          <p className="demo__title">More Than 100 Financial Planners,</p>
-          <p className="demo__subtitle">One Philosophy</p>
+          <p className="demo__title">
+            "Mastering the Art of Siding: A Visual Guide to Siding Installation"
+          </p>
           <p className="demo__paragraph">
-            Every single one of our financial advisors receives rigorous
-            training according to John Doe’s philosophy based on academic
-            research (including that of a Nobel laureate in Economics) and
-            Behavioral Finance.
+            Immerse yourself in the timeless beauty of wood siding through our
+            captivating video. Explore the warmth and charm it brings to homes,
+            along with its natural durability and versatility for a truly
+            classic exterior.
           </p>
         </div>
         <div className="demo__video">
           <div class="ratio ratio-4x3">
             <iframe
-              src="https://www.youtube.com/embed/0aUav1lx3rA"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ciXAkQc4KUo"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe>
+            />
           </div>
         </div>
       </div>

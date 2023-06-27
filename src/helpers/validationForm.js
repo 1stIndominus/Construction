@@ -1,5 +1,3 @@
-import React from "react";
-
 export const nameValidationField = (userName) => {
   const nameValidationRegexp = /^[a-zA-Z]{3,20}$/;
   const isNameIncludeDigit = /(\d)|([!~+-@#$%^&*])/ig;

@@ -65,8 +65,9 @@
 
   &__paragraph {
     color: #fff;
-    margin: 0 20px 0;
+    margin: 20px 20px 0;
     font-size: 0.8rem;
+    font-style: italic;
     margin-bottom: 1rem;
 
     @include onTablet {

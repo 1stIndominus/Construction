@@ -5,17 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  // height: 100vh;
-  margin-top: 100px;
   width: 100%;
-
-  @include onTablet {
-    margin-top: 300px;
-  }
-
-  @include onDesktop {
-    margin-top: 500px;
-  }
 
   &__content {
     color: #fff;

@@ -85,7 +85,7 @@ export const Footer = () => {
               to="About"
               spy={true}
               smooth={true}
-              offset={-300}
+              offset={-110}
               duration={500}
               className="menu__item"
             >

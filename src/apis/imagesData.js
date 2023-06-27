@@ -1,102 +1,90 @@
 export const workingImages = [
   {
     source: require("../assets/homes/1.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Beautiful vinyl siding enhances curb appeal and protects your home.",
   },
   {
     source: require("../assets/homes/2.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Soffit installation ensures proper ventilation and a polished exterior.",
   },
   {
     source: require("../assets/homes/3.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Elegant wood siding adds warmth and timeless charm to homes.",
   },
   {
     source: require("../assets/homes/4.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Durable fiber cement siding withstands all weather conditions effortlessly.",
   },
   {
     source: require("../assets/homes/5.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Professional siding installation transforms your house into a stunning masterpiece.",
   },
   {
     source: require("../assets/homes/7.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Enhance your home's exterior with stylish and modern metal siding.",
   },
   {
     source: require("../assets/homes/8.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Siding repair restores the beauty and integrity of your property.",
   },
   {
     source: require("../assets/homes/9.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Upgrade your home's appearance with low-maintenance vinyl soffit panels.",
   },
   {
     source: require("../assets/homes/10.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Enjoy hassle-free upkeep with durable and fade-resistant vinyl siding.",
   },
   {
     source: require("../assets/homes/11.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Expert siding installation ensures superior protection and long-lasting beauty.",
   },
   {
     source: require("../assets/homes/12.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Discover the natural beauty of cedar siding for a rustic charm.",
   },
   {
     source: require("../assets/homes/13.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Elevate your home's style with versatile and modern composite siding.",
   },
   {
     source: require("../assets/homes/14.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Soffit repair prevents water damage and enhances overall aesthetics.",
   },
   {
     source: require("../assets/homes/15.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Achieve a classic look with smooth and textured stucco siding.",
   },
   {
     source: require("../assets/homes/16.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
-  },
-  {
-    source: require("../assets/homes/17.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
-  },
-  {
-    source: require("../assets/homes/18.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Enhance your home's architectural style with decorative trim and soffit.",
   },
   {
     source: require("../assets/homes/19.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Aluminum soffit offers a lightweight and corrosion-resistant solution.",
   },
   {
     source: require("../assets/homes/20.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
-  },
-  {
-    source: require("../assets/homes/21.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Aluminum siding combines durability with a sleek and modern appearance.",
   },
   {
     source: require("../assets/homes/22.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Elevate your home's design with vertical siding for a unique look.",
   },
   {
     source: require("../assets/homes/23.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Modernize your home's exterior with sleek and durable metal siding.",
   },
   {
     source: require("../assets/homes/24.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Metal siding offers a contemporary look with long-lasting performance.",
   },
   {
     source: require("../assets/homes/25.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Enhance your home's energy efficiency with insulated metal siding panels.",
   },
   {
     source: require("../assets/homes/26.jpg"),
-    title: "Siding Installation Image of workers installing siding on a house.",
+    title: "Choose metal siding for a low-maintenance and weather-resistant solution.",
   },
 ];
