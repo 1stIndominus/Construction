@@ -1,20 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a96e933e.css",
-    "main.js": "/static/js/main.9a02237f.js",
-    "static/media/17.jpg": "/static/media/17.c20e4388a29ee4e240bc.jpg",
+    "main.css": "/static/css/main.cc4e2fa1.css",
+    "main.js": "/static/js/main.20e58dfc.js",
+    "static/media/wood-deck2.jpg": "/static/media/wood-deck2.3a56975fa83b746156e6.jpg",
     "static/media/13.jpg": "/static/media/13.1145d38346ae2184e6f4.jpg",
     "static/media/10.jpg": "/static/media/10.68b63a8af8c22e938f37.jpg",
     "static/media/20.jpg": "/static/media/20.94bdf416b99dd8b35c25.jpg",
-    "static/media/21.jpg": "/static/media/21.94ddbed321182b619d77.jpg",
     "static/media/19.jpg": "/static/media/19.54447c893f0aa51181d6.jpg",
-    "static/media/abstract.jpg": "/static/media/abstract.0d6c387198112f922782.jpg",
     "static/media/8.jpg": "/static/media/8.8d4ee1ec30d4a0a3a83f.jpg",
     "static/media/16.jpg": "/static/media/16.f46a1af5d8e72acad49e.jpg",
     "static/media/12.jpg": "/static/media/12.5e69c2b006f2feb63c30.jpg",
     "static/media/11.jpg": "/static/media/11.1867a791dcf88094c944.jpg",
     "static/media/9.jpg": "/static/media/9.d1a51cf55e6526b38acb.jpg",
-    "static/media/18.jpg": "/static/media/18.adb405872c640eae76da.jpg",
     "static/media/22.jpg": "/static/media/22.d06cbe24392c57550cbe.jpg",
     "static/media/14.jpg": "/static/media/14.b8c9c574617e7524b7e0.jpg",
     "static/media/15.jpg": "/static/media/15.1f8be3e5e5fd9ba6555e.jpg",
@@ -33,11 +30,11 @@
     "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.a5357cc4e5d4eeb42793.ttf",
     "static/media/CastoroTitling-Regular.ttf": "/static/media/CastoroTitling-Regular.baead5ee069318eedb41.ttf",
     "index.html": "/index.html",
-    "main.a96e933e.css.map": "/static/css/main.a96e933e.css.map",
-    "main.9a02237f.js.map": "/static/js/main.9a02237f.js.map"
+    "main.cc4e2fa1.css.map": "/static/css/main.cc4e2fa1.css.map",
+    "main.20e58dfc.js.map": "/static/js/main.20e58dfc.js.map"
   },
   "entrypoints": [
-    "static/css/main.a96e933e.css",
-    "static/js/main.9a02237f.js"
+    "static/css/main.cc4e2fa1.css",
+    "static/js/main.20e58dfc.js"
   ]
 }
