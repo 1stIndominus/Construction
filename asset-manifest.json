@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc4e2fa1.css",
-    "main.js": "/static/js/main.20e58dfc.js",
+    "main.css": "/static/css/main.58336409.css",
+    "main.js": "/static/js/main.d1881e14.js",
     "static/media/wood-deck2.jpg": "/static/media/wood-deck2.3a56975fa83b746156e6.jpg",
     "static/media/13.jpg": "/static/media/13.1145d38346ae2184e6f4.jpg",
     "static/media/10.jpg": "/static/media/10.68b63a8af8c22e938f37.jpg",
@@ -28,13 +28,14 @@
     "static/media/25.jpg": "/static/media/25.dcae443e3b99efd0f257.jpg",
     "static/media/24.jpg": "/static/media/24.5d6c10e2a36561ca6c23.jpg",
     "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.a5357cc4e5d4eeb42793.ttf",
+    "static/media/vitaliy.jpg": "/static/media/vitaliy.0312e6940132ae1b4620.jpg",
     "static/media/CastoroTitling-Regular.ttf": "/static/media/CastoroTitling-Regular.baead5ee069318eedb41.ttf",
     "index.html": "/index.html",
-    "main.cc4e2fa1.css.map": "/static/css/main.cc4e2fa1.css.map",
-    "main.20e58dfc.js.map": "/static/js/main.20e58dfc.js.map"
+    "main.58336409.css.map": "/static/css/main.58336409.css.map",
+    "main.d1881e14.js.map": "/static/js/main.d1881e14.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc4e2fa1.css",
-    "static/js/main.20e58dfc.js"
+    "static/css/main.58336409.css",
+    "static/js/main.d1881e14.js"
   ]
 }
