@@ -12,7 +12,7 @@ export const nameValidationField = (userName) => {
 };
 
 export const emailValidationField = (userEmail) => {
-  const regexp = /^[a-zA-Z0-9_.]+@[a-z0-9.]+\.[a-z]{2,12}$/g;
+  const regexp = /^[a-zA-Z0-9_.-]+@[a-z0-9.]+\.[a-z]{2,12}$/g;
 
   if (userEmail.length < 6) {
     return 'Email is too chort'

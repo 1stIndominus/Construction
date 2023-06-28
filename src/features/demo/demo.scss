@@ -13,7 +13,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    // padding: 20px;
 
     @include onAverage {
       flex-direction: row;
@@ -36,8 +36,10 @@
   &__title {
     color: #fff;
     font-size: 1.2rem;
+    text-align: center;
     font-style: italic;
-    margin: 0 20px 0;
+    margin: 0 auto;
+    padding: 20px;
 
     @include onTablet {
       font-size: 1.6rem;
@@ -65,10 +67,12 @@
 
   &__paragraph {
     color: #fff;
-    margin: 20px 20px 0;
+    // margin-top: 20px;
     font-size: 0.8rem;
     font-style: italic;
+    text-align: center;
     margin-bottom: 1rem;
+    padding: 20px;
 
     @include onTablet {
       font-size: 1rem;

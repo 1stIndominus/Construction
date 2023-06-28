@@ -15,16 +15,16 @@ export const About = () => {
           <p className="about__content--description">
             Are you looking to renovate your home? AllBuilt Homes is here to
             help you transform your house into a stunning masterpiece. We
-            specialize in high-quality siding and soffit installations & remodeling that not
-            only enhance the look of your home but also protect it from harsh
-            weather conditions. Our expert team of professionals will guide you
-            through the process, ensuring that your vision is executed to
-            perfection.
+            specialize in high-quality siding and soffit installations &
+            remodeling that not only enhance the look of your home but also
+            protect it from harsh weather conditions. Our expert team of
+            professionals will guide you through the process, ensuring that your
+            vision is executed to perfection.
           </p>
           <p className="about__content--me">
             <span className="about__content--me-highlight">AllBuilt Homes</span>
-            : Quality construction & remodeling, expertly installed siding, soffit, windows,
-            and doors. Headed by experienced builder Vitaliy Radchuk.
+            : Quality construction, remodeling & expertly installed siding.
+            Headed by experienced builder Vitaliy Radchuk.
           </p>
           <Link
             to="swiper"
@@ -32,7 +32,7 @@ export const About = () => {
             smooth={true}
             offset={-150}
             duration={500}
-            className="about__content--button"
+            className="button"
           >
             Explore More
           </Link>
