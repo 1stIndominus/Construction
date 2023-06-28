@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 export const ImageSwiper = () => {
   return (
     <div className="containers" id="swiper">
-      <h1 className="heading">Our Works</h1>
+      <h1 className="heading">The Exquisite Portfolio of Vitaliy's Craftsmanship</h1>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

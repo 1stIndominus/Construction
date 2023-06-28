@@ -5,8 +5,8 @@
   margin: 100px auto;
   width: 100%;
 
-  @include onTablet {
-    margin: 200px auto;
+  @include onAverage {
+    margin-top: 200px;
   }
 
   &__container {

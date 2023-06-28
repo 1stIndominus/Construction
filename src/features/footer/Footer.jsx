@@ -108,11 +108,10 @@ export const Footer = () => {
             </Link>
           </li>
         </ul>
-
       </div>
-        <div class="footer__content--terms">
-            © 2023 All rights reserved. Terms of Use & Privacy Policy
-        </div>
+      <div class="footer__content--terms">
+        © 2023 All rights reserved. Terms of Use & Privacy Policy
+      </div>
     </div>
   );
 };

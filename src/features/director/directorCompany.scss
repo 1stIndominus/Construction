@@ -2,7 +2,7 @@
 @import "../../utils/vars";
 
 .card {
-  width: 50%;
+  width: 80%;
   height: 30em;
   background: #171717;
   transition: 1s ease-in-out;
@@ -17,8 +17,16 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   display: flex;
-  margin: 100px auto;
+  margin: 50px auto;
   flex-direction: column;
+
+  @include onTablet {
+    width: 65%;
+  }
+
+  @include onAverage {
+    width: 50%;
+  }
 
   &__img {
     width: 10em;
