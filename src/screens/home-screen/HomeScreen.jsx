@@ -7,6 +7,7 @@ import { About } from "../../features/about/About";
 import { ImageSwiper } from "../../features/swiper/ImageSwiper";
 import { DeliverySection } from "../../features/delivery/DeliverySection";
 import { DemoSection } from "../../features/demo/DemoSection";
+import { CompanyDirector } from "../../features/director/CompanyDirector";
 
 export function HomeScreen() {
   return (
@@ -17,6 +18,7 @@ export function HomeScreen() {
       <DeliverySection />
       <DemoSection />
       <ImageSwiper />
+      <CompanyDirector />
       <Footer />
     </div>
   );

@@ -130,3 +130,8 @@
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--gradient)
 }
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}

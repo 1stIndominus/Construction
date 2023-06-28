@@ -1,0 +1,65 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.card {
+  width: 50%;
+  height: 30em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  margin: 100px auto;
+  flex-direction: column;
+
+  &__img {
+    width: 10em;
+    height: 10em;
+    background: white;
+    border-radius: 15px;
+    margin: 3em auto;
+    background: url("../../assets/images/vitaliy.jpg") center center/cover
+      no-repeat;
+
+    transition: 0.5s linear;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__info {
+    font-weight: 400;
+    color: white;
+    display: block;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.72em;
+    margin: 1em;
+
+    @include onAverage {
+      font-size: 1em;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    
+    display: block;
+    font-size: 1em;
+
+    @include onTablet {
+      font-size: 1.5em;
+    }
+  }
+}

@@ -11,10 +11,12 @@ export const DemoSection = () => {
             "Mastering the Art of Siding: A Visual Guide to Siding Installation"
           </p>
           <p className="demo__paragraph">
-            Immerse yourself in the timeless beauty of wood siding through our
-            captivating video. Explore the warmth and charm it brings to homes,
-            along with its natural durability and versatility for a truly
-            classic exterior.
+            <span className="about__content--me-highlight">
+              Immerse yourself in the timeless beauty of wood siding through our
+              captivating video.&nbsp;
+            </span>
+            Explore the warmth and charm it brings to homes, along with its
+            natural durability and versatility for a truly classic exterior.
           </p>
         </div>
         <div className="demo__video">

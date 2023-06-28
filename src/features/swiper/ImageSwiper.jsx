@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 
 export const ImageSwiper = () => {
   return (
-    <div className="container" id="swiper">
+    <div className="containers" id="swiper">
       <h1 className="heading">Our Works</h1>
       <Swiper
         effect={"coverflow"}
