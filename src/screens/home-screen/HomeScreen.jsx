@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./homescreen.scss";
 import { NavBar } from "../../features/nav-bar/NavBar";
 import { Footer } from "../../features/footer/Footer";
@@ -8,6 +8,7 @@ import { ImageSwiper } from "../../features/swiper/ImageSwiper";
 import { DeliverySection } from "../../features/delivery/DeliverySection";
 import { DemoSection } from "../../features/demo/DemoSection";
 import { CompanyDirector } from "../../features/director/CompanyDirector";
+import { ExperianceTimer } from "../../components/ExperianceTimer";
 
 export function HomeScreen() {
   return (
@@ -19,6 +20,7 @@ export function HomeScreen() {
       <DemoSection />
       <ImageSwiper />
       <CompanyDirector />
+      <ExperianceTimer />
       <Footer />
     </div>
   );

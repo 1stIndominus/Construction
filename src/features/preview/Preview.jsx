@@ -8,6 +8,7 @@ import {
 import { NAME_ERROR, EMAIL_ERROR } from "../../helpers/constants";
 import { postDataFromInputsToTelegram } from "../../apis/fetchData";
 import { VERIFIED, QUESTION_ERROR } from "../../helpers/constants";
+import { ExperianceTimer } from "../../components/ExperianceTimer";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -20,7 +21,8 @@ export const Preview = () => {
 
   const isNameErrorVisible = isNameValid !== VERIFIED && userName.length > 1;
   const isEmailErrorVisible = isEmailValid !== VERIFIED && email.length > 3;
-  const isTextAreaErrorVisible = isQuestionValid !== VERIFIED && question.length > 5;
+  const isTextAreaErrorVisible =
+    isQuestionValid !== VERIFIED && question.length > 5;
 
   const resetFields = () => {
     setUserName("");
@@ -63,6 +65,8 @@ export const Preview = () => {
         <p className="hero__description">
           Expert Construction Services and Solutions
         </p>
+
+        {/* <ExperianceTimer /> */}
 
         <form
           onSubmit={(event) => handleSubmit(event)}

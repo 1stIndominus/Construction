@@ -111,7 +111,7 @@
   height: 50px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background: var( --liniar-gradient);
   background-size: 250%;
   background-position: left;
   color: #ffd277;

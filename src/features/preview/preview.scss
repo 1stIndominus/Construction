@@ -101,6 +101,7 @@
     opacity: 0.8;
     width: 100%;
     justify-content: center;
+    transition: 0.5s linear;
 
     @include onTablet {
       height: 40px;
@@ -129,6 +130,7 @@
       background: var(--gradient);
       border: 1px solid var(--gradient);
       cursor: pointer;
+      transition: 0.5s linear;
     }
   }
 }
@@ -238,6 +240,59 @@
     margin-left: 10px;
   }
 }
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 30px;
+
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+
+  &__active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__experiance {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    background: var(--overlay);
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__nums {
+    font-size: 16px;
+    font-style: italic;
+
+    @include onTablet {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    font-style: italic;
+
+    @include onTablet {
+      font-size: 14px;
+    }
+  }
+}
+
+// .timer.active {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
 
 @keyframes animate {
   0%,
