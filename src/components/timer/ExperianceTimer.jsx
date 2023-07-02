@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import '../features/preview/preview.scss';
+import './experianceTimer.scss';
 
 export const ExperianceTimer = () => {
   const [yearsTimer, setYearsTimer] = useState(0);
@@ -9,37 +9,34 @@ export const ExperianceTimer = () => {
 
   const targetRef = useRef(null);
 
-  const [isActive, setIsActive] = useState(false);
-
   useEffect(() => {
+    const blockElement = targetRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            startTimers();
+            setTimeout(() => {
+              startTimers();
+            }, 1500);
+            blockElement.classList.add('active');
           } else {
             stopTimers();
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0 }
     );
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-      setIsActive(true);
-    }
+    observer.observe(blockElement);
 
     return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-      }
+      observer.unobserve(targetRef.current);
       stopTimers();
     };
   }, []);
 
   const startTimers = () => {
-    // Start the timers
     const years = setInterval(() => {
       setYearsTimer((prevNum) => (prevNum === 10 ? prevNum : prevNum + 1));
     }, 100);
@@ -56,13 +53,12 @@ export const ExperianceTimer = () => {
   };
 
   const stopTimers = () => {
-    // Stop the timers
     intervals.forEach((interval) => clearInterval(interval));
     setIntervals([]);
   };
 
   return (
-    <div className={`timer ${isActive ? 'timer__active' : ''}`} ref={targetRef}>
+    <div className={`timer`} ref={targetRef}>
       <div className="timer__experiance">
         <span className="timer__nums">{yearsTimer}</span>
         <p className="timer__text">Years of experiance</p>

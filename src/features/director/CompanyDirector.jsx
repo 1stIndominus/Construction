@@ -1,20 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./directorCompany.scss";
+import React, { useLayoutEffect , useRef } from "react";
+import "./companyDirectory.scss";
 import { scrollHandler } from "../../helpers/scrollHandler";
 
 export const CompanyDirector = () => {
-  const [isActive, setIsActive] = useState(false);
-  const targetRef = useRef(null);
+  const card = useRef(null);
 
-  useEffect(() => {
-    scrollHandler(setIsActive, targetRef);
+  useLayoutEffect (() => {
+    scrollHandler(card);
   }, []);
 
   return (
-    <div class={`card ${isActive ? "card__active" : ""}`} ref={targetRef}>
-      <div class="card__img"></div>
-      <span class="card__title">Сompany's CEO</span>
-      <p class="card__info">
+    <div className={`card`} ref={card}>
+      <div className="card__img"></div>
+      <span className="card__title">Сompany's CEO</span>
+      <p className="card__info">
         I'm Vitaliy, a versatile builder specializing in captivating visual
         transformations.&nbsp;
         <span className="about__content--me-highlight">

@@ -1,5 +1,5 @@
-@import '../../utils/vars.scss';
-@import '../../utils/mixins.scss';
+@import "../../utils/vars.scss";
+@import "../../utils/mixins.scss";
 
 .about {
   margin: 100px auto;
@@ -21,11 +21,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 
 
     &--wrapper {
       width: 100%;
       margin: 0 auto;
+
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: opacity 2s ease-in-out, transform 3s ease-in-out;
     }
   }
 
@@ -35,6 +41,10 @@
     width: 100%;
     align-items: center;
     margin: 0 auto;
+
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: opacity 2s ease-in-out, transform 3s ease-in-out;
 
     @include onAverage {
       padding: 20px;
@@ -106,12 +116,17 @@
   }
 }
 
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .button {
   width: 200px;
   height: 50px;
   border: none;
   border-radius: 10px;
-  background: var( --liniar-gradient);
+  background: var(--liniar-gradient);
   background-size: 250%;
   background-position: left;
   color: #ffd277;

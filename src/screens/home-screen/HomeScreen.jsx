@@ -8,7 +8,7 @@ import { ImageSwiper } from "../../features/swiper/ImageSwiper";
 import { DeliverySection } from "../../features/delivery/DeliverySection";
 import { DemoSection } from "../../features/demo/DemoSection";
 import { CompanyDirector } from "../../features/director/CompanyDirector";
-import { ExperianceTimer } from "../../components/ExperianceTimer";
+import { ExperianceTimer } from "../../components/timer/ExperianceTimer";
 
 export function HomeScreen() {
   return (

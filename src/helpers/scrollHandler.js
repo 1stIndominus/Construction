@@ -1,23 +1,20 @@
-export const scrollHandler = (setIsActive, ref) => {
+export const scrollHandler = (targetRef) => {
+  const blockElement = targetRef.current;
+
   const observer = new IntersectionObserver(
     (entries) => {
-      const [entry] = entries;
-      setIsActive(entry.isIntersecting);
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          blockElement.classList.add(`active`);
+        }
+      });
     },
-    {
-      threshold: 0.5,
-    }
+    { threshold: 0 }
   );
 
-  if (ref.current) {
-    observer.observe(ref.current);
-    setIsActive(true);
-  }
+  observer.observe(blockElement);
 
   return () => {
-    if (ref.current) {
-      observer.unobserve(ref.current);
-    }
-    // stopTimers();
+    observer.unobserve(blockElement);
   };
-}
+};

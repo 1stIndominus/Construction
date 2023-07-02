@@ -8,7 +8,6 @@ import {
 import { NAME_ERROR, EMAIL_ERROR } from "../../helpers/constants";
 import { postDataFromInputsToTelegram } from "../../apis/fetchData";
 import { VERIFIED, QUESTION_ERROR } from "../../helpers/constants";
-import { ExperianceTimer } from "../../components/ExperianceTimer";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
@@ -65,8 +64,6 @@ export const Preview = () => {
         <p className="hero__description">
           Expert Construction Services and Solutions
         </p>
-
-        {/* <ExperianceTimer /> */}
 
         <form
           onSubmit={(event) => handleSubmit(event)}

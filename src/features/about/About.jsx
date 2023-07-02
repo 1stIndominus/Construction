@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import house from "../../assets/homes/23.jpg";
 import "./about.scss";
 import { Link } from "react-scroll";
+import { scrollHandler } from "../../helpers/scrollHandler";
 
 export const About = () => {
+  const aboutDescription = useRef(null);
+  const aboutImage = useRef(null);
+
+  useEffect(() => {
+    scrollHandler(aboutDescription);
+  }, []);
+
+  useEffect(() => {
+    scrollHandler(aboutImage);
+  }, []);
+
   return (
     <div className="about" id="About">
       <div className="about__container">
-        <div className="about__image--wrapper">
+        <div className="about__image--wrapper" ref={aboutImage}>
           <img className="about__image" src={house} alt="john" />
         </div>
-        <div className="about__content">
+        <div
+          className={`about__content`}
+          ref={aboutDescription}
+        >
           <h1 className="about__content--title">About</h1>
           <p className="about__content--description">
             Are you looking to renovate your home? AllBuilt Homes is here to
