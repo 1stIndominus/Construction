@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./preview.scss";
 import {
   nameValidationField,
@@ -8,11 +8,28 @@ import {
 import { NAME_ERROR, EMAIL_ERROR } from "../../helpers/constants";
 import { postDataFromInputsToTelegram } from "../../apis/fetchData";
 import { VERIFIED, QUESTION_ERROR } from "../../helpers/constants";
+import { scrollHandlerForPreview } from "../../helpers/scrollHandler";
 
 export const Preview = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [question, setQuestion] = useState("");
+
+  const title = useRef(null);
+  const subTitle = useRef(null);
+  const inputForm = useRef(null);
+
+  useEffect(() => {
+    scrollHandlerForPreview(title);
+  }, []);
+
+  useEffect(() => {
+    scrollHandlerForPreview(subTitle);
+  }, []);
+
+  useEffect(() => {
+    scrollHandlerForPreview(inputForm);
+  }, []);
 
   const isNameValid = nameValidationField(userName);
   const isEmailValid = emailValidationField(email);
@@ -58,16 +75,21 @@ export const Preview = () => {
       <div className="hero__content">
         {/* <p className="hero__title">Call us</p>
         <p className="hero__number">+1 208-966-1947</p> */}
-        <p data-text="AllBuilt Homes" className="hero__subtitle">
+        <p 
+          data-text="AllBuilt Homes" 
+          className="hero__title" 
+          ref={title}
+        >
           AllBuilt Homes
         </p>
-        <p className="hero__description">
+        <p className="hero__description" ref={subTitle}>
           Expert Construction Services and Solutions
         </p>
 
         <form
           onSubmit={(event) => handleSubmit(event)}
           className="coolinput__container"
+          ref={inputForm}
         >
           <div class="coolinput">
             <label for="inputField" className="coolinput__text">

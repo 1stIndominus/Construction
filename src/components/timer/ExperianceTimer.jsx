@@ -18,7 +18,7 @@ export const ExperianceTimer = () => {
           if (entry.isIntersecting) {
             setTimeout(() => {
               startTimers();
-            }, 1500);
+            }, 1000);
             blockElement.classList.add('active');
           } else {
             stopTimers();

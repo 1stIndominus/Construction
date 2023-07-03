@@ -7,6 +7,11 @@
   margin: 0 auto 0;
 }
 
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .heading {
   color: #fff;
   font-size: 1rem;
@@ -14,6 +19,10 @@
   font-style: italic;
   justify-content: center;
   padding: 20px;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
   @include onTablet {
     font-size: 2rem;
@@ -35,6 +44,10 @@
 .swiper__container {
   height: 44rem;
   position: relative;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
   @include onTablet {
     height: 48rem;
@@ -129,7 +142,7 @@
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--gradient)
+  background: var(--gradient);
 }
 
 .swiper-slide-shadow-left,

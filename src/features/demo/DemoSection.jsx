@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./demo.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { scrollHandler } from "../../helpers/scrollHandler";
 
 export const DemoSection = () => {
+  const demoInfo = useRef(null);
+  const demoVideo = useRef(null);
+
+  useEffect(() => {
+    scrollHandler(demoInfo);
+  }, []);
+
+  useEffect(() => {
+    scrollHandler(demoVideo);
+  }, []);
+
   return (
     <div className="demo" id="demo">
       <div className="demo__container">
-        <div className="demo__info">
+        <div className="demo__info" ref={demoInfo}>
           <p className="demo__title">
             "Mastering the Art of Siding: A Visual Guide to Siding Installation"
           </p>
@@ -19,7 +31,7 @@ export const DemoSection = () => {
             natural durability and versatility for a truly classic exterior.
           </p>
         </div>
-        <div className="demo__video">
+        <div className="demo__video" ref={demoVideo}>
           <div class="ratio ratio-4x3">
             <iframe
               width="560"
