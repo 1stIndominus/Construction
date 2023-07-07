@@ -28,9 +28,9 @@ export const scrollHandler = (targetRef) => {
     threshold: 0,
   };
 
-  const intersectionCallback = (entries, observer) => {
+  const intersectionCallback = (entries) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio === 0 && entry.boundingClientRect.y >= 0) {
+      if (entry.intersectionRatio === 0 && entry.boundingClientRect.y > 0) {
         // Block is scrolled out of view at the bottom
         blockElement.classList.remove("active");
       } else {
@@ -49,15 +49,15 @@ export const scrollHandler = (targetRef) => {
 
   const scrollListener = () => {
     const isScrolledToBottom =
-      window.innerHeight + window.pageYOffset >=
+      window.innerHeight + window.pageYOffset >
       document.documentElement.scrollHeight;
     const isAtVeryBottom =
       window.innerHeight + window.pageYOffset ===
       document.documentElement.scrollHeight;
 
-    if (isScrolledToBottom && !isAtVeryBottom) {
-      blockElement.classList.remove("active");
-    }
+    // if (isScrolledToBottom && !isAtVeryBottom) {
+    //   blockElement.classList.remove("active");
+    // }
   };
 
   window.addEventListener("scroll", scrollListener);
