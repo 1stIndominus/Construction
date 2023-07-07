@@ -7,18 +7,29 @@
   margin: 0 auto 0;
 }
 
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .heading {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
+  font-style: italic;
   justify-content: center;
+  padding: 20px;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
   @include onTablet {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   @include onDesktop {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -26,23 +37,24 @@
   color: #fff;
   text-align: center;
   margin-bottom: 15px;
-  // padding: 15px;
+  font-style: italic;
   margin: 20px 50px 0;
 }
 
 .swiper__container {
   height: 44rem;
-  // padding: 2rem 0;
   position: relative;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
   @include onTablet {
     height: 48rem;
-    // padding: 2rem 0;
   }
 
   @include onDesktop {
     height: 52rem;
-    // padding: 2rem 0;
   }
 }
 
@@ -61,16 +73,12 @@
 .swiper-slide {
   width: 90%;
   height: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 }
 
 .swiper-slide img {
   width: 80%;
   height: 80%;
   border-radius: 2rem;
-  // padding: 0 40px;
   margin: 0 45px;
   align-items: center;
   justify-content: center;
@@ -87,11 +95,18 @@
 
 .slider-controler {
   position: relative;
-  bottom: 2rem;
+  bottom: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @include onTablet {
+    bottom: 2rem;
+  }
+  @include onDesktop {
+    bottom: 5rem;
+  }
 }
 
 .swiper-button-next {
@@ -122,20 +137,12 @@
   transform: translateX(-42%);
 }
 
-// .slider-controler {
-//   display: none;
-
-//   @include onTablet {
-//     display: flex;
-//   }
-// }
-
 .slider-controler .slider-arrow::after {
   content: "";
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--gradient)
+  background: var(--gradient);
 }
 
 .swiper-slide-shadow-left,

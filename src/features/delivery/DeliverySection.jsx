@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./delivery.scss";
+import { scrollHandler } from "../../helpers/scrollHandler";
 
 export const DeliverySection = () => {
+  const delivery = useRef(null);
+
+  useEffect(() => {
+    scrollHandler(delivery);
+  }, []);
+
   return (
-    <div className="delivery">
+    <div className={`delivery`} ref={delivery}>
       <div className="delivery__content">
         <span className="delivery__content--text">
           Reliable and punctual, I guarantee timely delivery of your

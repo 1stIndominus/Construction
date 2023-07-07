@@ -1,0 +1,50 @@
+@import "../../utils/vars.scss";
+@import "../../utils/mixins";
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 30px;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+  &__experiance {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    background: var(--overlay);
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__nums {
+    font-size: 16px;
+    font-style: italic;
+
+    @include onTablet {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    font-style: italic;
+
+    @include onTablet {
+      font-size: 14px;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -1,5 +1,5 @@
-@import '../../utils/vars.scss';
-@import '../../utils/mixins.scss';
+@import "../../utils/vars.scss";
+@import "../../utils/mixins.scss";
 
 .about {
   margin: 100px auto;
@@ -21,11 +21,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 
 
     &--wrapper {
       width: 100%;
       margin: 0 auto;
+
+      opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     }
   }
 
@@ -35,6 +41,10 @@
     width: 100%;
     align-items: center;
     margin: 0 auto;
+
+    opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
     @include onAverage {
       padding: 20px;
@@ -47,7 +57,7 @@
 
     &--title {
       font-size: 2rem;
-      margin: 0;
+      margin-top: 20px;
       color: #fff;
 
       @include onTablet {
@@ -63,6 +73,7 @@
       font-size: 0.9rem;
       font-style: italic;
       font-weight: 300;
+      text-align: center;
       color: rgb(247, 227, 227);
 
       @include onTablet {
@@ -82,6 +93,7 @@
       font-size: 1.1rem;
       font-style: italic;
       font-weight: 300;
+      text-align: center;
       color: rgb(247, 227, 227);
 
       @include onTablet {
@@ -103,22 +115,57 @@
         font-weight: bold;
       }
     }
+  }
+}
 
-    &--button {
-      width: 200px;
-      height: 50px;
-      background-color: var(--primary-dark);
-      border-color: var(--primary-dark);
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      text-decoration: none;
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
 
-      &:hover {
-        background-color: var(--primary-color);
-      }
+.button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: var(--liniar-gradient);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "Explore More";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+  }
+
+  &:hover {
+    background-position: right;
+    transition-duration: 1s;
+
+    &::before {
+      background-position: right;
+      transition-duration: 1s;
     }
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }

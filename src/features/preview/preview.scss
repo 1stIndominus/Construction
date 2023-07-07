@@ -30,13 +30,6 @@
     padding: 1rem;
   }
 
-  &__title {
-    padding: 0;
-    margin: 0;
-    font-style: italic;
-    font-size: 0.9rem;
-  }
-
   &__number {
     padding: 0;
     margin: 0;
@@ -47,12 +40,16 @@
     }
   }
 
-  &__subtitle {
+  &__title {
     padding: 0;
     margin: 0.5rem 0;
     font-size: 1.5rem;
     font-weight: 700;
     color: #222;
+
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
     &:before {
       content: attr(data-text);
@@ -81,6 +78,10 @@
     font-size: 1rem;
     font-style: italic;
 
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+
     @include onTablet {
       font-size: 1.6rem;
     }
@@ -101,6 +102,7 @@
     opacity: 0.8;
     width: 100%;
     justify-content: center;
+    transition: 0.5s linear;
 
     @include onTablet {
       height: 40px;
@@ -129,8 +131,14 @@
       background: var(--gradient);
       border: 1px solid var(--gradient);
       cursor: pointer;
+      transition: 0.5s linear;
     }
   }
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .coolinput {
@@ -140,6 +148,10 @@
   &__container {
     margin: 30px auto 0;
     width: 100%;
+
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 
     @include onTablet {
       margin: 30px 0 0;
@@ -238,6 +250,11 @@
     margin-left: 10px;
   }
 }
+
+// .timer.active {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
 
 @keyframes animate {
   0%,

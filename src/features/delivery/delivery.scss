@@ -2,21 +2,33 @@
 @import "../../utils/vars";
 
 .delivery {
-  padding: 20px;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+  margin: 0 auto;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+  @include onAverage {
+    margin-top: 100px;
+  }
 
   &__content {
     display: flex;
     justify-content: center;
-    border-top-right-radius: 40px;
     align-items: center;
-    background: url("../../assets/images/abstract.jpg") center center/cover
+    background: url("../../assets/images/wood-deck2.jpg") center center/cover
       no-repeat;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 89%);
+    clip-path: polygon(0 12%, 100% 4%, 100% 94%, 0 89%);
     height: 300px;
-    margin-top: 50px;
+    opacity: 1;
 
     @include onTablet {
-      margin-top: 100px;
+      border-bottom-right-radius: 60px;
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 89%);
     }
 
     &--text {
@@ -35,4 +47,9 @@
       }
     }
   }
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
 }

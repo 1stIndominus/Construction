@@ -24,10 +24,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BsFacebook
-                size={24}
-                className="social__list--icon"
-              />
+              <BsFacebook size={24} className="social__list--icon" />
             </a>
           </li>
           <li className="social__list--item">
@@ -37,10 +34,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BsInstagram
-                size={24}
-                className="social__list--icon"
-              />
+              <BsInstagram size={24} className="social__list--icon" />
             </a>
           </li>
           <li className="social__list--item">
@@ -50,7 +44,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BsEnvelope size={24}className="social__list--icon" />
+              <BsEnvelope size={24} className="social__list--icon" />
             </a>
           </li>
           <li className="social__list--item">
@@ -60,10 +54,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BsTelegram
-                size={24}
-                className="social__list--icon"
-              />
+              <BsTelegram size={24} className="social__list--icon" />
             </a>
           </li>
         </ul>
@@ -85,7 +76,7 @@ export const Footer = () => {
               to="About"
               spy={true}
               smooth={true}
-              offset={-300}
+              offset={-110}
               duration={500}
               className="menu__item"
             >
@@ -117,6 +108,9 @@ export const Footer = () => {
             </Link>
           </li>
         </ul>
+      </div>
+      <div class="footer__content--terms">
+        © 2023 All rights reserved. Terms of Use & Privacy Policy
       </div>
     </div>
   );

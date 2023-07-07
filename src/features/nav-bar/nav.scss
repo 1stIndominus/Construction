@@ -182,7 +182,7 @@
         left: 0;
         right: 0;
         height: 2px;
-        background: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+        background: var( --liniar-gradient);
       }
     }
   }
