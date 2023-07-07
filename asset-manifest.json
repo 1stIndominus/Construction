@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cbeb9a7e.css",
-    "main.js": "/static/js/main.24eef0ec.js",
+    "main.js": "/static/js/main.881f6a81.js",
     "static/media/wood-deck2.jpg": "/static/media/wood-deck2.3a56975fa83b746156e6.jpg",
     "static/media/13.jpg": "/static/media/13.1145d38346ae2184e6f4.jpg",
     "static/media/10.jpg": "/static/media/10.68b63a8af8c22e938f37.jpg",
@@ -32,10 +32,10 @@
     "static/media/CastoroTitling-Regular.ttf": "/static/media/CastoroTitling-Regular.baead5ee069318eedb41.ttf",
     "index.html": "/index.html",
     "main.cbeb9a7e.css.map": "/static/css/main.cbeb9a7e.css.map",
-    "main.24eef0ec.js.map": "/static/js/main.24eef0ec.js.map"
+    "main.881f6a81.js.map": "/static/js/main.881f6a81.js.map"
   },
   "entrypoints": [
     "static/css/main.cbeb9a7e.css",
-    "static/js/main.24eef0ec.js"
+    "static/js/main.881f6a81.js"
   ]
 }
