@@ -25,11 +25,9 @@
     clip-path: polygon(0 12%, 100% 4%, 100% 94%, 0 89%);
     height: 300px;
     opacity: 1;
-    border-bottom-right-radius: 60px;
-    // margin-top: 50px;
 
     @include onTablet {
-      // margin-top: 100px;
+      border-bottom-right-radius: 60px;
       clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 89%);
     }
 

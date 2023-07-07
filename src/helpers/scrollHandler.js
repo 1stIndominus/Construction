@@ -22,29 +22,30 @@ export const scrollHandlerForPreview = (targetRef) => {
 export const scrollHandler = (targetRef) => {
   const blockElement = targetRef.current;
 
-  let isIntersecting = false;
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.boundingClientRect.y > 0) {
-          // Block is intersecting and scrolled down
-          isIntersecting = window.pageYOffset.current;
-          blockElement.classList.add('active');
-        } else {
-          // Block is either not intersecting or scrolled to the top
-          isIntersecting = false;
-        }
-      });
-    },
-    { threshold: 0 }
-  );
+  const intersectionCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio === 0 && entry.boundingClientRect.y > 0) {
+        // Block is scrolled out of view at the bottom
+        blockElement.classList.remove('active');
+      } else {
+        // Block is intersecting or scrolled to the top
+        blockElement.classList.add('active');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(intersectionCallback, observerOptions);
 
   observer.observe(blockElement);
 
-  // Additional logic to handle removing class when scrolling to the very top
   const scrollListener = () => {
-    if (window.pageYOffset === 0) {
+    if (window.pageYOffset + window.innerHeight > document.documentElement.scrollHeight) {
       blockElement.classList.remove('active');
     }
   };
@@ -56,4 +57,5 @@ export const scrollHandler = (targetRef) => {
     window.removeEventListener('scroll', scrollListener);
   };
 };
+
 
