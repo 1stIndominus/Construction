@@ -30,7 +30,7 @@ export const scrollHandler = (targetRef) => {
 
   const intersectionCallback = (entries, observer) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio === 0 && entry.boundingClientRect.y > 0) {
+      if (entry.intersectionRatio === 0 && entry.boundingClientRect.y >= 0) {
         // Block is scrolled out of view at the bottom
         blockElement.classList.remove('active');
       } else {
