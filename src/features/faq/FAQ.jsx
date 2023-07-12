@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./faq.scss";
 import { faqData } from "../../apis/faqData";
 import { scrollHandler } from "../../helpers/scrollHandler";
-import { BsChevronCompactUp } from "react-icons/bs";
+import { BsChevronUp } from "react-icons/bs";
 
 export const FAQ = () => {
   const [activeItems, setActiveItems] = useState([]);
@@ -36,7 +36,7 @@ export const FAQ = () => {
               onClick={() => toggleActiveItem(index)}
             >
               <h3 className="faq__question--title">{faq.question}</h3>
-              <BsChevronCompactUp
+              <BsChevronUp
                 size={24}
                 color={"#fff"}
                 className={
