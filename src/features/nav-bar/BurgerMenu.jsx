@@ -61,6 +61,19 @@ export const BurgerMenu = () => {
             Contacts
           </Link>
         </li>
+        <li className="burger__item">
+          <Link
+            to="FAQ"
+            spy={true}
+            smooth={true}
+            offset={-360}
+            duration={500}
+            className="burger__text"
+            onClick={() => setShow(false)}
+          >
+            FAQs
+          </Link>
+        </li>
       </ul>
     </div>
   );

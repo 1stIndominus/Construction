@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import './experianceTimer.scss';
+import "./experianceTimer.scss";
 
 export const ExperianceTimer = () => {
   const [yearsTimer, setYearsTimer] = useState(0);
   const [feetTimer, setFeetTimer] = useState(0);
   const [workersTimer, setWorkersTimer] = useState(0);
   const [intervals, setIntervals] = useState([]);
+  const [timeoutId, setTimeoutId] = useState(null);
 
   const targetRef = useRef(null);
 
@@ -16,12 +17,15 @@ export const ExperianceTimer = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
+            const id = setTimeout(() => {
               startTimers();
             }, 1000);
-            blockElement.classList.add('active');
+            setTimeoutId(id);
+
+            blockElement.classList.add("active");
           } else {
             stopTimers();
+            blockElement.classList.remove("active");
           }
         });
       },
@@ -33,6 +37,7 @@ export const ExperianceTimer = () => {
     return () => {
       observer.unobserve(targetRef.current);
       stopTimers();
+      clearTimeout(timeoutId);
     };
   }, []);
 
@@ -42,7 +47,9 @@ export const ExperianceTimer = () => {
     }, 100);
 
     const feet = setInterval(() => {
-      setFeetTimer((prevNum) => (prevNum === 100000 ? prevNum : prevNum + 1000));
+      setFeetTimer((prevNum) =>
+        prevNum === 100000 ? prevNum : prevNum + 1000
+      );
     }, 10);
 
     const workers = setInterval(() => {

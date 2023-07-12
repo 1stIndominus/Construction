@@ -1,0 +1,55 @@
+import React, { useState, useRef, useEffect } from "react";
+import "./faq.scss";
+import { faqData } from "../../apis/faqData";
+import { scrollHandler } from "../../helpers/scrollHandler";
+import { BsChevronCompactUp } from "react-icons/bs";
+
+export const FAQ = () => {
+  const [activeItems, setActiveItems] = useState([]);
+  const faqRef = useRef(null);
+
+  useEffect(() => {
+    scrollHandler(faqRef);
+  }, []);
+
+  const toggleActiveItem = (index) => {
+    setActiveItems((prevItems) => {
+      if (prevItems.includes(index)) {
+        return prevItems.filter((item) => item !== index);
+      } else {
+        return [...prevItems, index];
+      }
+    });
+  };
+  return (
+    <div className="faq" ref={faqRef} id="FAQ">
+      <h1 className="faq__title">
+        <span className="about__content--me-highlight">FAQ</span>s
+      </h1>
+      {faqData.map((faq, index) => {
+        const isActive = activeItems.includes(index);
+
+        return (
+          <div className="faq__content">
+            <div
+              className="faq__question"
+              onClick={() => toggleActiveItem(index)}
+            >
+              <h3 className="faq__question--title">{faq.question}</h3>
+              <BsChevronCompactUp
+                size={24}
+                color={"#fff"}
+                className={
+                  isActive ? "faq__question--svg-active" : "faq__question--svg"
+                }
+              />
+            </div>
+            <div className={isActive ? "faq__answer--active" : "faq__answer"}>
+              <p className="faq__answer--description">{faq.answer}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
