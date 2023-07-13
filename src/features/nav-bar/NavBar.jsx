@@ -62,6 +62,18 @@ export const NavBar = () => {
                 Contacts
               </Link>
             </li>
+            <li className="navigation__list">
+              <Link
+                to="FAQ"
+                spy={true}
+                smooth={true}
+                offset={-360}
+                duration={500}
+                className="navigation__item"
+              >
+                FAQs
+              </Link>
+            </li>
           </ul>
           <div className="burger-menu" onClick={toggle}>
             <div

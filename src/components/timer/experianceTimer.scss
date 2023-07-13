@@ -5,8 +5,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 30px;
-  gap: 30px;
+  margin: 100px auto 0;
+  width: 90%;
+  gap: 15px;
 
   opacity: 0;
   transform: scale(0.5);
@@ -15,7 +16,8 @@
   &__experiance {
     display: flex;
     flex-direction: column;
-    width: 10em;
+    width: 28%;
+    max-width: 12rem;
     height: 5em;
     justify-content: center;
     align-items: center;
@@ -46,5 +48,4 @@
 
 .active {
   opacity: 1;
-  transform: translateX(0);
 }

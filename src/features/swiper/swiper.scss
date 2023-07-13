@@ -1,10 +1,10 @@
 @import "../../utils/mixins";
 @import "../../utils/vars";
 
-.container {
+.containers {
   width: 100%;
-  height: 100vh;
-  margin: 0 auto 0;
+  // height: 100vh;
+  margin: 100px auto 0;
 }
 
 .active {
@@ -42,7 +42,7 @@
 }
 
 .swiper__container {
-  height: 44rem;
+  height: 40rem;
   position: relative;
 
   opacity: 0;
@@ -59,7 +59,7 @@
 }
 
 .swiper-slide {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 28rem !important;
   height: 36rem !important;
   position: relative;
@@ -101,40 +101,9 @@
   align-items: center;
   justify-content: center;
 
-  @include onTablet {
-    bottom: 2rem;
-  }
   @include onDesktop {
     bottom: 5rem;
   }
-}
-
-.swiper-button-next {
-  left: 80% !important;
-  transform: translateX(-80%) !important;
-
-  @include onTablet {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-}
-
-.swiper-button-prev {
-  left: 20% !important;
-  transform: translateX(-20%) !important;
-  @include onTablet {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-}
-
-.slider-arrow {
-  background: transparent;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  left: 42%;
-  transform: translateX(-42%);
 }
 
 .slider-controler .slider-arrow::after {
@@ -149,3 +118,31 @@
 .swiper-slide-shadow-right {
   display: none;
 }
+
+// .swiper-button-next {
+//   left: 80% !important;
+//   transform: translateX(-80%) !important;
+
+//   @include onTablet {
+//     left: 70% !important;
+//     transform: translateX(-70%) !important;
+//   }
+// }
+
+// .swiper-button-prev {
+//   left: 20% !important;
+//   transform: translateX(-20%) !important;
+//   @include onTablet {
+//     left: 30% !important;
+//     transform: translateX(-30%) !important;
+//   }
+// }
+
+// .slider-arrow {
+//   background: transparent;
+//   width: 3.5rem;
+//   height: 3.5rem;
+//   border-radius: 50%;
+//   left: 42%;
+//   transform: translateX(-42%);
+// }
