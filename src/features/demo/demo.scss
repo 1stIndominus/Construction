@@ -2,18 +2,13 @@
 @import "../../utils/vars";
 
 .demo {
-  margin: 0 auto;
+  margin: 100px auto 0;
   width: 100%;
-
-  @include onAverage {
-    margin-top: 200px;
-  }
 
   &__container {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    // padding: 20px;
 
     @include onAverage {
       flex-direction: row;

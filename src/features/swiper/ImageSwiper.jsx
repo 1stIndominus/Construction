@@ -25,7 +25,9 @@ export const ImageSwiper = () => {
   return (
     <div className="containers" id="swiper">
       <h1 className="heading" ref={title}>
-        The Exquisite Portfolio of Vitaliy's Craftsmanship
+        The Exquisite{" "}
+        <span className="about__content--me-highlight">Portfolio</span> of
+        Vitaliy's Craftsmanship
       </h1>
       <Swiper
         ref={images}
@@ -41,7 +43,7 @@ export const ImageSwiper = () => {
           modifier: 2.5,
         }}
         speed={1000}
-        autoplay={{ delay: 1500, disableOnInteraction: false }}
+        autoplay={{ delay: 3000 }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper__container"
