@@ -131,12 +131,12 @@
 }
 
 .burger-bar.clicked:nth-child(2) {
-  transform: scale(0.1);
+  transform: scale(0);
   transition: ease-out 0.5s;
 }
 
 .burger-bar.clicked:nth-child(3) {
-  transform: rotate(135deg) translate(-0.2em, 0.2em);
+  transform: rotate(135deg) translate(-0.1em, 0.2em);
   transition: ease-out 0.5s;
 }
 

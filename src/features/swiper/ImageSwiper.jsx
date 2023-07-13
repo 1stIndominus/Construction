@@ -40,12 +40,9 @@ export const ImageSwiper = () => {
           depth: 100,
           modifier: 2.5,
         }}
+        speed={1000}
+        autoplay={{ delay: 1500, disableOnInteraction: false }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper__container"
       >
