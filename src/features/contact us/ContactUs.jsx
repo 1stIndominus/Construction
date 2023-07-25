@@ -18,7 +18,7 @@ export const ContactUs = () => {
           <span className="about__content--me-highlight">&nbsp;Today</span>
         </h2>
         <p className="contactUs__info--description">
-          Connect with Allbuilt Home to begin your dream project!
+          Connect with Allbuilt Homes to begin your dream project!
           <span className="about__content--me-highlight">
             &nbsp;Use the form to share your details and needs.&nbsp;
           </span>
