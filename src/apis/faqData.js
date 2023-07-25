@@ -47,6 +47,6 @@ export const faqData = [
   {
     id: 10,
     question: "How can I request a consultation with Allbuilt Home?",
-    answer: "Scheduling a consultation with Allbuilt Home is easy. You can fill out the contact form at the top of the page, or you can contact us via social media below. We'll be happy to discuss your project and arrange a convenient time for a consultation."
+    answer: "Scheduling a consultation with Allbuilt Home is easy. You can fill out the contact form above, or you can contact us via social media below. We'll be happy to discuss your project and arrange a convenient time for a consultation."
   }
 ]

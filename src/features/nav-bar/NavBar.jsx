@@ -43,7 +43,7 @@ export const NavBar = () => {
                 to="swiper"
                 spy={true}
                 smooth={true}
-                offset={-150}
+                offset={-100}
                 duration={500}
                 className="navigation__item"
               >

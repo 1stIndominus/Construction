@@ -11,6 +11,7 @@ import { CompanyDirector } from "../../features/director/CompanyDirector";
 import { ExperianceTimer } from "../../components/timer/ExperianceTimer";
 import { MyProvider } from "../../helpers/ContextMenu";
 import { FAQ } from "../../features/faq/FAQ";
+import { ContactUs } from "../../features/contact us/ContactUs";
 
 export function HomeScreen() {
   const { show, toggle } = useContext(MyProvider);
@@ -25,6 +26,7 @@ export function HomeScreen() {
       <ImageSwiper />
       <CompanyDirector />
       <ExperianceTimer />
+      <ContactUs />
       <FAQ />
       <Footer />
     </div>
