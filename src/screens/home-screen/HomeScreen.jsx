@@ -12,6 +12,7 @@ import { ExperianceTimer } from "../../components/timer/ExperianceTimer";
 import { MyProvider } from "../../helpers/ContextMenu";
 import { FAQ } from "../../features/faq/FAQ";
 import { ContactUs } from "../../features/contact us/ContactUs";
+import { ChatButton } from "../../components/buttons/ChatButton";
 
 export function HomeScreen() {
   const { show, toggle } = useContext(MyProvider);
@@ -19,6 +20,9 @@ export function HomeScreen() {
   return (
     <div className="main__container" onClick={show ? toggle : null}>
       <NavBar />
+      <div className="main__container--chat">
+        <ChatButton />
+      </div>
       <Preview />
       <About />
       <DeliverySection />

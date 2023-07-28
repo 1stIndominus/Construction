@@ -11,7 +11,7 @@ export const ContactUs = () => {
   }, [])
 
   return (
-    <div className="contactUs">
+    <div className="contactUs" id="contactUS">
       <div className="contactUs__info" ref={formInfo}>
         <h2 className="contactUs__info--title">
           Contact Us
