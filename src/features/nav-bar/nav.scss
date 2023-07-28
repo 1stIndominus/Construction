@@ -6,7 +6,7 @@
   position: fixed;
   height: 90px;
   width: 100%;
-  max-width: 1600px;
+  min-width: max-content;
   margin: 0 auto;
   top: 0;
   z-index: 11;

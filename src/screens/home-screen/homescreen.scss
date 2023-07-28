@@ -12,15 +12,12 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
-    top: 100vh - 10;
+    top: 100vh - 20;
     z-index: 50;
 
     @include onTablet {
       margin-right: 50px;
+      top: 100vh - 12;
     }
-  }
-
-  @include onDesktop {
-    max-width: 1600px;
   }
 }
