@@ -16,8 +16,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../../assets/images/wood-deck2.jpg") center center/cover
-      no-repeat;
+    // background: url("../../assets/images/wood-deck2.jpg") center center/cover
+    //   no-repeat;
+    background: var(--grey-gradient);
     clip-path: polygon(0 12%, 100% 4%, 100% 94%, 0 89%);
     height: 300px;
     opacity: 1;

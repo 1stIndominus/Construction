@@ -49,6 +49,7 @@
     width: 100px;
     height: 80px;
     background-size: contain;
+    cursor: pointer;
 
     @include onAverage {
       width: 150px;

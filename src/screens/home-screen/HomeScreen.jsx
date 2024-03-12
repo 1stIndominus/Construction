@@ -8,7 +8,7 @@ import { ImageSwiper } from "../../features/swiper/ImageSwiper";
 import { DeliverySection } from "../../features/delivery/DeliverySection";
 import { DemoSection } from "../../features/demo/DemoSection";
 import { CompanyDirector } from "../../features/director/CompanyDirector";
-import { ExperianceTimer } from "../../components/timer/ExperianceTimer";
+
 import { MyProvider } from "../../helpers/ContextMenu";
 import { FAQ } from "../../features/faq/FAQ";
 import { ContactUs } from "../../features/contact us/ContactUs";
@@ -29,9 +29,8 @@ export function HomeScreen() {
       <DemoSection />
       <ImageSwiper />
       <CompanyDirector />
-      <ExperianceTimer />
-      <ContactUs />
       <FAQ />
+      <ContactUs />
       <Footer />
     </div>
   );

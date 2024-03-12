@@ -59,12 +59,12 @@
 
 .swiper-slide {
   margin-top: 20px;
-  width: 28rem !important;
+  width: 90% !important;
   height: 36rem !important;
   position: relative;
 
   @include onTablet {
-    width: 37rem;
+    max-width: 60rem;
     height: 42rem;
   }
 }
@@ -81,13 +81,13 @@
   margin: 0 45px;
   align-items: center;
   justify-content: center;
-  object-fit: cover;
+  object-fit: fill;
 
   @include onTablet {
-    width: 28rem;
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
-    height: 36rem;
     border-radius: 1rem;
   }
 }

@@ -10,7 +10,7 @@ export const DeliverySection = () => {
   }, []);
 
   return (
-    <div className={`delivery`} ref={delivery}>
+    <div className="delivery" ref={delivery}>
       <div className="delivery__content">
         <span className="delivery__content--text">
           Reliable and punctual, I guarantee timely delivery of your

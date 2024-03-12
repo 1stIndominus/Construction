@@ -5,7 +5,7 @@ export const workingImages = [
   },
   {
     source: require("../assets/homes/2.jpg"),
-    title: "Soffit installation ensures proper ventilation and a polished exterior",
+    title: "Attractive wooden cladding elevates the exterior charm of your property.",
   },
   {
     source: require("../assets/homes/3.jpg"),
