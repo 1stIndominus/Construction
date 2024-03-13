@@ -65,7 +65,7 @@ export const workingImages = [
   },
   {
     source: require("../assets/homes/20.jpg"),
-    title: "Aluminum siding combines durability with a sleek and modern appearance",
+    title: "Metal siding combines durability with a sleek and modern appearance",
   },
   {
     source: require("../assets/homes/22.jpg"),
@@ -73,7 +73,7 @@ export const workingImages = [
   },
   {
     source: require("../assets/homes/23.jpg"),
-    title: "Modernize your home's exterior with sleek and durable metal siding",
+    title: "Modernize your home's exterior with sleek and durable wood siding",
   },
   {
     source: require("../assets/homes/24.jpg"),
