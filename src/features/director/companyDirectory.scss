@@ -5,7 +5,6 @@
   width: 80%;
   height: 30em;
   background: #171717;
-  // transition: 1s ease-in-out;
   clip-path: polygon(
     30px 0%,
     100% 0,
@@ -17,7 +16,7 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   display: flex;
-  margin: 50px auto;
+  margin: 50px auto 0;
   flex-direction: column;
 
   opacity: 0;
@@ -43,7 +42,7 @@
     background: white;
     border-radius: 15px;
     margin: 3em auto;
-    background: url("../../assets/images/vitaliy.jpg") center center/cover
+    background: url("../../assets/images/companyCEO.jpg") center center/cover
       no-repeat;
 
     transition: 0.5s linear;

@@ -40,7 +40,7 @@ export const BurgerMenu = () => {
             to="swiper"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={-100}
             duration={500}
             className="burger__text"
             onClick={() => setShow(false)}
@@ -59,6 +59,19 @@ export const BurgerMenu = () => {
             onClick={() => setShow(false)}
           >
             Contacts
+          </Link>
+        </li>
+        <li className="burger__item">
+          <Link
+            to="FAQ"
+            spy={true}
+            smooth={true}
+            offset={-360}
+            duration={500}
+            className="burger__text"
+            onClick={() => setShow(false)}
+          >
+            FAQs
           </Link>
         </li>
       </ul>

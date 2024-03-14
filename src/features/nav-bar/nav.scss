@@ -6,7 +6,7 @@
   position: fixed;
   height: 90px;
   width: 100%;
-  max-width: 1600px;
+  min-width: max-content;
   margin: 0 auto;
   top: 0;
   z-index: 11;
@@ -45,11 +45,15 @@
     display: flex;
     align-items: center;
 
-    background-image: url(../../assets/icons/gold-logo.png);
-    background-repeat: no-repeat;
-    width: 80px;
+    background: center no-repeat url(../../assets/icons/new-logo.png);
+    width: 100px;
     height: 80px;
     background-size: contain;
+    cursor: pointer;
+
+    @include onAverage {
+      width: 150px;
+    }
   }
 }
 
@@ -79,7 +83,7 @@
 
 .burger {
   width: 100%;
-  height: 300px;
+  height: 330px;
   position: fixed;
   top: 80px;
   left: 0;
@@ -119,7 +123,7 @@
         left: 0;
         right: 0;
         height: 2px;
-        background-image: linear-gradient(to right, #bd9546, #e6d48a, #deb750);
+        background: var( --liniar-gradient);
       }
     }
   }
@@ -131,12 +135,12 @@
 }
 
 .burger-bar.clicked:nth-child(2) {
-  transform: scale(0.1);
+  transform: scale(0);
   transition: ease-out 0.5s;
 }
 
 .burger-bar.clicked:nth-child(3) {
-  transform: rotate(135deg) translate(-0.2em, 0.2em);
+  transform: rotate(135deg) translate(-0.1em, 0.2em);
   transition: ease-out 0.5s;
 }
 

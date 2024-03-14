@@ -12,16 +12,13 @@
   transform: scale(0.5);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
-  @include onAverage {
-    margin-top: 100px;
-  }
-
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../../assets/images/wood-deck2.jpg") center center/cover
-      no-repeat;
+    // background: url("../../assets/images/wood-deck2.jpg") center center/cover
+    //   no-repeat;
+    background: var(--grey-gradient);
     clip-path: polygon(0 12%, 100% 4%, 100% 94%, 0 89%);
     height: 300px;
     opacity: 1;
