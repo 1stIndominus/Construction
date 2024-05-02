@@ -13,6 +13,7 @@ import { MyProvider } from "../../helpers/ContextMenu";
 import { FAQ } from "../../features/faq/FAQ";
 import { ContactUs } from "../../features/contact us/ContactUs";
 import { ChatButton } from "../../components/buttons/ChatButton";
+import RatingWithComment from "../../features/rating/Rate";
 
 export function HomeScreen() {
   const { show, toggle } = useContext(MyProvider);
@@ -29,6 +30,7 @@ export function HomeScreen() {
       <DemoSection />
       <ImageSwiper />
       <CompanyDirector />
+      <RatingWithComment />
       <FAQ />
       <ContactUs />
       <Footer />

@@ -17,7 +17,10 @@ export const FormWithFormik = () => {
 
   const onSubmit = (values, { resetForm }) => {
     console.log("values", values);
-    postDataFromInputsToTelegram(values);
+    const { userName, email, question } = values
+    const USER_DATA_MESSAGE = `UserName: ${userName}\nEmail: ${email}\nQuestion: ${question}`;
+
+    postDataFromInputsToTelegram(USER_DATA_MESSAGE);
     resetForm();
     if (textareaRef.current) {
       textareaRef.current.value = "";

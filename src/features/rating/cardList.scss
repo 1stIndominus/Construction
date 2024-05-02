@@ -1,0 +1,11 @@
+.list {
+  width: 100%;
+  overflow-x: auto;
+
+  &__card {
+    display: inline-flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
