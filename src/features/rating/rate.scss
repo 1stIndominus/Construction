@@ -56,9 +56,10 @@
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-    box-shadow: inset 2px 5px 10px rgb(19, 18, 18);
+    // box-shadow: inset 2px 5px 10px rgb(19, 18, 18);
     color: #fff;
     margin-bottom: 10px;
+    background: linear-gradient(to bottom right, transparent 0%, rgba(19, 18, 18, 0.6) 100%);
 
     @include onAverage {
       width: 300px;
@@ -76,7 +77,9 @@
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-    box-shadow: inset 2px 5px 10px rgb(19, 18, 18);
+    // box-shadow: inset 2px 5px 10px rgb(19, 18, 18);
+    background: linear-gradient(to bottom right, transparent 0%, rgba(19, 18, 18, 0.6) 100%);
+
     color: #fff;
     margin-right: 15px;
     margin-bottom: 12px;
