@@ -1,15 +1,15 @@
 const commentsData = [
   {
     id: 1,
-    rating: 4,
-    comment: "Absolutely thrilled with the siding work! Impeccable craftsmanship and attention to detail. My home looks stunning, thanks to your expertise!",
-    name: "Sarah Johnson"
+    rating: 5,
+    comment: "Allbuilt Homes has the ability to handle large projects and small projects and treats all projects the same. Vitalii and his team have delivered high-quality results and always handle challenges as they come up on custom projects. I highly recommend Allbuilt to deliver quality at a fair price.",
+    name: 'Jordan Davis'
   },
   {
     id: 2,
     rating: 5,
-    comment: "Exceptional interior finish work! The precision and care taken were evident in every detail. My space feels transformed and truly luxurious.",
-    name: "David Wilson"
+    comment: "Outstanding job remodeling my house! I appreciate your thorough communication and the high quality of your work. I will definitely recommend you to my clients, friends, and family. Thank you very much!",
+    name: "Lora Pindel"
   },
   {
     id: 3,

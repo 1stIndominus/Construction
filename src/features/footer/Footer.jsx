@@ -20,7 +20,7 @@ export const Footer = () => {
           <li className="social__list--item">
             <a
               className="social__list--icon-container"
-              href="https://www.facebook.com/vitaliy.radchuk.94"
+              href="https://www.facebook.com/profile.php?id=61557333729470&mibextid=ZbWKwL"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,7 +30,7 @@ export const Footer = () => {
           <li className="social__list--item">
             <a
               className="social__list--icon-container"
-              href="https://www.instagram.com/vitalixa/"
+              href="https://www.instagram.com/allbuilt.homes?igsh=YXFweWo1NjU4bzRl"
               target="_blank"
               rel="noopener noreferrer"
             >
