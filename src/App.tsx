@@ -1,12 +1,12 @@
 import "./App.scss";
-import { HomeScreen } from "./screens/home-screen/HomeScreen";
 import { ShowMenuProvider } from "./context/ContextMenu";
+import AppRoute from "./router/AppRoute";
 
 function App() {
   return (
     <div className="App">
       <ShowMenuProvider>
-        <HomeScreen />
+        <AppRoute />
       </ShowMenuProvider>
     </div>
   );
