@@ -1,26 +1,26 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./preview.scss";
 import { scrollHandlerForPreview } from "../../helpers/scrollHandler";
 
 export const Preview = () => {
-  const title = useRef(null);
-  const subTitle = useRef(null);
+  const titleRef = useRef(null);
+  const subTitleRef = useRef(null);
 
   useEffect(() => {
-    scrollHandlerForPreview(title);
+    scrollHandlerForPreview(titleRef);
   }, []);
 
   useEffect(() => {
-    scrollHandlerForPreview(subTitle);
+    scrollHandlerForPreview(subTitleRef);
   }, []);
 
   return (
     <div className="hero" id="Home">
       <div className="hero__content">
-        <p data-text="AllBuilt Homes" className="hero__title" ref={title}>
+        <p data-text="AllBuilt Homes" className="hero__title" ref={titleRef}>
           AllBuilt Homes
         </p>
-        <p className="hero__description" ref={subTitle}>
+        <p className="hero__description" ref={subTitleRef}>
           Expert Construction Services and Solutions
         </p>
       </div>
