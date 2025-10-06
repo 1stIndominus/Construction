@@ -14,6 +14,7 @@ import { FAQ } from "../../features/faq/FAQ";
 import { ContactUs } from "../../features/contact us/ContactUs";
 import { ChatButton } from "../../components/buttons/ChatButton";
 import RatingWithComment from "../../features/rating/Rate";
+import { CollectionIds, DocumentIds } from "../../types/type";
 
 export const HomeScreen: FC = () => {
   const { show, toggle } = useMenuContext();
@@ -31,7 +32,10 @@ export const HomeScreen: FC = () => {
       <ImageSwiper />
       <CompanyDirector />
       <RatingWithComment />
-      <FAQ />
+      <FAQ
+        collectionId={CollectionIds.FAQ}
+        dacumentId={DocumentIds.sidingFAQ}
+      />
       <ContactUs />
       <Footer />
     </div>
