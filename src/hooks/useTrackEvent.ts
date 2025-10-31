@@ -1,13 +1,17 @@
 import { useEffect } from "react";
-import { analyticsService } from "../services/analytics";
+import { AnalyticsEventProps, analyticsService } from "../services/analytics";
 import { AnalyticsEvent } from "../types/type";
 
 type EventProps = {
   eventName: AnalyticsEvent;
+  analyticsEventProps?: AnalyticsEventProps;
 };
 
-export const useTrackEvent = ({ eventName }: EventProps) => {
+export const useTrackEvent = ({
+  eventName,
+  analyticsEventProps,
+}: EventProps) => {
   useEffect(() => {
-    analyticsService.logCustomEvent(eventName, document.title);
+    analyticsService.logCustomEvent(eventName, { ...analyticsEventProps });
   }, []);
 };

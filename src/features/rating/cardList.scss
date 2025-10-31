@@ -1,6 +1,7 @@
 .list {
   width: 100%;
   overflow-x: auto;
+  margin-top: 50px;
 
   &__card {
     display: inline-flex;
@@ -8,4 +9,3 @@
     margin-top: 20px;
   }
 }
-

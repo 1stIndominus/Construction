@@ -1,5 +1,5 @@
 import commentsData from "../../staticData/commentsData";
-import { Card } from "../../components/card/CommentCard";
+import { CommentCard } from "../../components/card/commentCard/CommentCard";
 import "./cardList.scss";
 
 const CardList = () => {
@@ -7,7 +7,7 @@ const CardList = () => {
     <div className="list">
       <div className="list__card">
         {commentsData.map((card) => (
-          <Card
+          <CommentCard
             key={card.id}
             rating={card.rating}
             comment={card.comment}

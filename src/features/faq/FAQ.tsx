@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "./faq.scss";
 import { scrollHandler } from "../../helpers/scrollHandler";
 import { BsChevronUp } from "react-icons/bs";
-import { useGetCollectionData } from "../../hooks/useGetCollectionData";
+import { useGetFAQCollectionData } from "../../hooks/useGetFAQCollectionData";
 
 type Props = {
   collectionId: string;
@@ -13,7 +13,7 @@ export const FAQ: React.FC<Props> = ({ collectionId, dacumentId }) => {
   const [activeItems, setActiveItems] = useState<number[]>([]);
   const faqRef = useRef<HTMLDivElement | null>(null);
 
-  const { collectionData } = useGetCollectionData({
+  const { collectionData } = useGetFAQCollectionData({
     collectionId,
     dacumentId,
   });

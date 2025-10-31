@@ -1,10 +1,19 @@
 import { useRef, useEffect } from "react";
 import "./preview.scss";
 import { scrollHandlerForPreview } from "../../helpers/scrollHandler";
-import { NavigationCard } from "../../components/card/NavigationCard";
+import { TextButton } from "../../components/buttons/textButton/TextButton";
 import { ScreenList } from "../../router/constants/ScreenList";
 
-export const Preview = () => {
+type Props = {
+  imageUrl: string;
+  navButtonProps: {
+    title: string;
+    route: ScreenList;
+    icon: string;
+  };
+};
+
+export const Preview: React.FC<Props> = ({ imageUrl, navButtonProps }) => {
   const titleRef = useRef(null);
   const subTitleRef = useRef(null);
   const cardsRef = useRef(null);
@@ -22,7 +31,15 @@ export const Preview = () => {
   }, []);
 
   return (
-    <div className="hero" id="Home">
+    <image
+      className="hero"
+      id="Home"
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        justifyContent: "center",
+        alignContent: "center",
+      }}
+    >
       <div className="hero__content">
         <p data-text="AllBuilt Homes" className="hero__title" ref={titleRef}>
           AllBuilt Homes
@@ -32,17 +49,12 @@ export const Preview = () => {
         </p>
       </div>
       <div className="hero__cards" ref={cardsRef}>
-        <NavigationCard
-          title="Wanna build your dream house?"
-          route={ScreenList.NewBuildings}
-          icon="🏗️"
-        />
-        <NavigationCard
-          title="Wanna repair your house?"
-          route={ScreenList.Home}
-          icon="🔧"
+        <TextButton
+          title={navButtonProps.title}
+          route={navButtonProps.route}
+          icon={navButtonProps.icon}
         />
       </div>
-    </div>
+    </image>
   );
 };

@@ -1,28 +1,34 @@
-import { useGetCollectionData } from "../../hooks/useGetCollectionData";
+import { useGetPlansCollectionData } from "../../hooks/useGetPlansCollectionData";
+import { PlanCard } from "../../components/card/planCard/PlanCard";
 import "./buildingsSection.scss";
-
-type BuildingPlan = {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  buildingStatus: string;
-  propertyStatus: string;
-};
+import { CollectionIds, DocumentIds } from "../../types/type";
 
 export const BuildingsSection = () => {
-  const { collectionData } = useGetCollectionData({
-    collectionId: "plans",
-    dacumentId: "newBuildingPlans",
+  const { collectionData } = useGetPlansCollectionData({
+    collectionId: CollectionIds.plans,
+    dacumentId: DocumentIds.newBuildingPlans,
   });
 
+  if (!collectionData || !collectionData.length) {
+    return null;
+  }
+
   return (
-    <section className="buildings-section">
-      <div className="buildings-section__container">
-        {/* {plans.map((plan: BuildingPlan) => (
-          
-        ))} */}
+    <div className="building" id="Plans">
+      <div className="building__header">
+        <h2 className="building__title">Signature Homes & Plans</h2>
+        <p className="building__subtitle">
+          Explore our completed and in-progress projects — each designed with
+          precision, modern style, and lasting quality to turn every blueprint
+          into a place you can call home.
+        </p>
       </div>
-    </section>
+
+      <div className="building__content">
+        {collectionData.map((plan, index) => (
+          <PlanCard key={plan.id || index} plan={plan} />
+        ))}
+      </div>
+    </div>
   );
 };

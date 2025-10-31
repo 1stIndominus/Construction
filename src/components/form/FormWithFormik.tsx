@@ -49,7 +49,7 @@ export const FormWithFormik: React.FC = () => {
             <Field
               type="text"
               id="inputField"
-              placeholder="Type your Name"
+              placeholder="Name"
               name="userName"
               className={
                 touched.userName && errors.userName
@@ -71,7 +71,7 @@ export const FormWithFormik: React.FC = () => {
             <Field
               type="email"
               id="email"
-              placeholder="Type your Email"
+              placeholder="Email"
               name="email"
               className={
                 touched.email && errors.email
@@ -93,7 +93,7 @@ export const FormWithFormik: React.FC = () => {
             <Field
               innerRef={textareaRef}
               component="textArea"
-              placeholder="Type your Question"
+              placeholder="Question"
               name="question"
               className={
                 touched.question && errors.question

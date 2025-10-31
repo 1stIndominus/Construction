@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./badge.scss";
 
-enum BadgeVariant {
+export enum BadgeVariant {
   SUCCESS = "success",
   WARNING = "warning",
   INFO = "info",

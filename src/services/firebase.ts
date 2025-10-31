@@ -9,18 +9,16 @@ import {
   DocumentData,
 } from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAXeljBoAjq31fiW2ex7eLJmdYpF0YKqaM",
-  authDomain: "construction-83b3c.firebaseapp.com",
-  projectId: "construction-83b3c",
-  storageBucket: "construction-83b3c.firebasestorage.app",
-  messagingSenderId: "821134377017",
-  appId: "1:821134377017:web:d96b1804ca38a30d6f4de8",
-  measurementId: "G-8WWZWFH4EE",
+  apiKey: "AIzaSyDTEja5e3kMyXZuZ4f7rYoSms_xaLLdWNA",
+  authDomain: "construction-dc71f.firebaseapp.com",
+  projectId: "construction-dc71f",
+  storageBucket: "construction-dc71f.firebasestorage.app",
+  messagingSenderId: "252222761221",
+  appId: "1:252222761221:web:ada91e4f33e43e0f712f6c",
+  measurementId: "G-70YQVDERRD",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
