@@ -8,3 +8,10 @@ export enum ErrorMessages {
   EMAIL_ERROR = "email_error",
   QUESTION_ERROR = "question_error",
 }
+
+export const facebookUrl =
+  "https://www.facebook.com/profile.php?id=61557333729470&mibextid=ZbWKwL";
+export const instagramUrl =
+  "https://www.instagram.com/allbuilt.homes?igsh=YXFweWo1NjU4bzRl";
+export const telegramUrl = "https://t.me/Allbuilt_homes";
+export const emailUrl = "mailto:V.r.carpenterfloor@gmail.com";

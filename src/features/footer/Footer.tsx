@@ -1,9 +1,14 @@
-import { Link } from "react-scroll";
 import "./footer.scss";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
+import {
+  emailUrl,
+  facebookUrl,
+  instagramUrl,
+  telegramUrl,
+} from "../../constants";
 
 export const Footer = () => {
   return (
@@ -19,7 +24,7 @@ export const Footer = () => {
           <li className="social__list--item">
             <a
               className="social__list--icon-container"
-              href="https://www.facebook.com/profile.php?id=61557333729470&mibextid=ZbWKwL"
+              href={facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -29,7 +34,7 @@ export const Footer = () => {
           <li className="social__list--item">
             <a
               className="social__list--icon-container"
-              href="https://www.instagram.com/allbuilt.homes?igsh=YXFweWo1NjU4bzRl"
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -39,7 +44,7 @@ export const Footer = () => {
           <li className="social__list--item">
             <a
               className="social__list--icon-container"
-              href="mailto:V.r.carpenterfloor@gmail.com"
+              href={emailUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -49,62 +54,12 @@ export const Footer = () => {
           <li className="social__list--item">
             <a
               className="social__list--icon-container"
-              href="https://t.me/Allbuilt_homes"
+              href={telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               <BsTelegram size={24} className="social__list--icon" />
             </a>
-          </li>
-        </ul>
-        <ul className="menu">
-          <li className="menu__list">
-            <Link
-              to="Home"
-              spy={true}
-              smooth={true}
-              offset={-150}
-              duration={500}
-              className="menu__item"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="menu__list">
-            <Link
-              to="About"
-              spy={true}
-              smooth={true}
-              offset={-110}
-              duration={500}
-              className="menu__item"
-            >
-              About us
-            </Link>
-          </li>
-          <li className="menu__list">
-            <Link
-              to="swiper"
-              spy={true}
-              smooth={true}
-              offset={-150}
-              duration={500}
-              className="menu__item"
-            >
-              Services
-            </Link>
-          </li>
-          <li className="menu__list">
-            <Link
-              to="Contacts"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              className="menu__item"
-            >
-              Contacts
-            </Link>
           </li>
         </ul>
       </div>

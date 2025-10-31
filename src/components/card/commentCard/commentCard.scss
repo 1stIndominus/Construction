@@ -1,0 +1,94 @@
+@import "../../../utils/vars";
+@import "../../../utils/mixins.scss";
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 480px;
+  border: 1px solid var(--grey-dark);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+
+  @include onDesktop {
+    width: 290px;
+  }
+
+  &__comment-wrapper {
+    margin-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__comment {
+    color: var(--grey-light);
+    font-size: 18px;
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+
+    &--expanded {
+      overflow-y: auto;
+      -webkit-line-clamp: unset;
+      display: block;
+      max-height: 300px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--grey-dark) transparent;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--grey-dark);
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &__comment-measure {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &__read-more {
+    margin-top: 8px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    align-self: flex-start;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+  }
+}

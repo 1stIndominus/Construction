@@ -1,0 +1,44 @@
+@import "../../utils/vars";
+@import "../../utils/mixins";
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &--default {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--grey-dark);
+  }
+
+  &--success {
+    background: rgba(91, 180, 98, 0.9);
+    color: white;
+  }
+
+  &--warning {
+    background: rgba(255, 193, 7, 0.9);
+    color: var(--grey-dark);
+  }
+
+  &--info {
+    background: rgba(33, 150, 243, 0.9);
+    color: white;
+  }
+
+  &--danger {
+    background: rgba(244, 67, 54, 0.9);
+    color: white;
+  }
+
+  @media (max-width: 499px) {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+  }
+}

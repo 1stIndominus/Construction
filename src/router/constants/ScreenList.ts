@@ -1,4 +1,4 @@
-export enum ScreenList { 
-  Home = '/',
-  NewBuildings = '/new-buildings',
+export enum ScreenList {
+  HomeRenovation = "/home-renovation",
+  NewBuildings = "/",
 }
