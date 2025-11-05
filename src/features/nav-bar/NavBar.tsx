@@ -26,7 +26,7 @@ export const NavBar: React.FC<Props> = ({ linkButtonData }) => {
             />
             <ul className="navigation">
               {linkButtonData.map(({ to, label, offset }) => (
-                <li className="navigation__list">
+                <li className="navigation__list" key={label}>
                   <Link
                     to={to}
                     spy={true}

@@ -15,3 +15,7 @@ export const instagramUrl =
   "https://www.instagram.com/allbuilt.homes?igsh=YXFweWo1NjU4bzRl";
 export const telegramUrl = "https://t.me/Allbuilt_homes";
 export const emailUrl = "mailto:V.r.carpenterfloor@gmail.com";
+
+export const SHOW_CHAT_BUTTON_DELAY = 10_000;
+export const GOOGLE_MAPS_BASE_SEARCH_URL =
+  "https://www.google.com/maps/search/?api=1&query=";

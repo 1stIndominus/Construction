@@ -7,7 +7,6 @@ import { ImageSwiper } from "../../features/swiper/ImageSwiper";
 import { DeliverySection } from "../../features/delivery/DeliverySection";
 import { DemoSection } from "../../features/demo/DemoSection";
 import { CompanyDirector } from "../../features/director/CompanyDirector";
-
 import { useMenuContext } from "../../context/ContextMenu";
 import { FAQ } from "../../features/faq/FAQ";
 import { ContactUs } from "../../features/contact us/ContactUs";

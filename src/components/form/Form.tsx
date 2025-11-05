@@ -84,6 +84,7 @@ export const Form: FC = () => {
             value={userName}
             placeholder="Type your Name"
             name="input"
+            autoComplete="name"
             className={
               isNameErrorVisible
                 ? "coolinput__input--error"
@@ -94,14 +95,16 @@ export const Form: FC = () => {
           {isNameErrorVisible && _renderErrorText(ErrorMessages.NAME_ERROR)}
         </div>
         <div className="coolinput">
-          <label htmlFor="input" className="coolinput__text">
+          <label htmlFor="email" className="coolinput__text">
             Email
           </label>
           <input
-            type="text"
+            type="email"
+            id="email"
             value={email}
             placeholder="Type your Email"
             name="input"
+            autoComplete="email"
             className={
               isEmailErrorVisible
                 ? "coolinput__input--error"
@@ -112,14 +115,15 @@ export const Form: FC = () => {
           {isEmailErrorVisible && _renderErrorText(ErrorMessages.EMAIL_ERROR)}
         </div>
         <div className="coolinput">
-          <label htmlFor="input" className="coolinput__text">
+          <label htmlFor="question" className="coolinput__text">
             Question
           </label>
           <textarea
-            id="text"
+            id="question"
             value={question}
             placeholder="Type your Question"
             name="input"
+            autoComplete="off"
             className={
               isTextAreaErrorVisible
                 ? "coolinput__input--textarea-error"
