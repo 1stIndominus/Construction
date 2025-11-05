@@ -9,6 +9,7 @@ import "./planCard.scss";
 import Carousel from "../../carousels/Carousel";
 import { Link } from "react-scroll";
 import { getBadgeVariant } from "../../../helpers/getBadgeVariant";
+import { GOOGLE_MAPS_BASE_SEARCH_URL } from "../../../constants";
 
 const Controls = () => {
   const { zoomIn, zoomOut, resetTransform, centerView } = useControls();
@@ -58,6 +59,12 @@ export const PlanCard = ({ plan }: { plan: BuildingPlansType }) => {
     portfolio,
   } = plan;
 
+  const handleAddressClick = (address: string) => {
+    const encodedAddress = encodeURIComponent(address);
+    const googleMapsUrl = `${GOOGLE_MAPS_BASE_SEARCH_URL}${encodedAddress}`;
+    window.open(googleMapsUrl, "_blank");
+  };
+
   return (
     <div className="plan-card">
       <div className="plan-card__header">
@@ -74,7 +81,15 @@ export const PlanCard = ({ plan }: { plan: BuildingPlansType }) => {
       </div>
 
       {title && <h3 className="plan-card__title">{title}</h3>}
-      {address && <p className="plan-card__address">📍 {address}</p>}
+      {address && (
+        <p
+          className="plan-card__address"
+          onClick={() => handleAddressClick(address)}
+          title="Click to view on Google Maps"
+        >
+          📍 {address}
+        </p>
+      )}
       {description && <p className={"plan-card__text"}>{description}</p>}
 
       {!sold && (

@@ -43,7 +43,7 @@ export const FormWithFormik: React.FC = () => {
       {({ errors, touched, isValid }) => (
         <Form className="coolinput__container" ref={inputForm}>
           <div className="coolinput">
-            <label htmlFor="name" className="coolinput__text">
+            <label htmlFor="inputField" className="coolinput__text">
               Name
             </label>
             <Field
@@ -51,6 +51,7 @@ export const FormWithFormik: React.FC = () => {
               id="inputField"
               placeholder="Name"
               name="userName"
+              autoComplete="name"
               className={
                 touched.userName && errors.userName
                   ? "coolinput__input--error"
@@ -73,6 +74,7 @@ export const FormWithFormik: React.FC = () => {
               id="email"
               placeholder="Email"
               name="email"
+              autoComplete="email"
               className={
                 touched.email && errors.email
                   ? "coolinput__input--error"
@@ -92,9 +94,11 @@ export const FormWithFormik: React.FC = () => {
             </label>
             <Field
               innerRef={textareaRef}
-              component="textArea"
+              component="textarea"
+              id="question"
               placeholder="Question"
               name="question"
+              autoComplete="off"
               className={
                 touched.question && errors.question
                   ? "coolinput__input--textarea-error"

@@ -51,10 +51,13 @@ const RatingWithComment = () => {
           <input
             required
             type="text"
+            id="rating-name"
+            name="rating-name"
             placeholder="Your Name"
             value={name}
             onChange={handleNameChange}
             className="rate__input"
+            autoComplete="name"
           />
           <StarRating totalStars={5} onRate={handleRate} />
           <button
@@ -70,12 +73,15 @@ const RatingWithComment = () => {
           </button>
         </div>
         <textarea
+          id="rating-comment"
+          name="rating-comment"
           className="rate__textinput"
           value={comment}
           onChange={handleCommentChange}
           placeholder="Leave a comment..."
           rows={2}
           cols={50}
+          autoComplete="off"
         />
         <br />
       </form>

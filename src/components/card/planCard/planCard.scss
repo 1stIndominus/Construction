@@ -52,6 +52,17 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--secondary-dark);
+      transform: translateX(5px);
+    }
+
+    &:active {
+      transform: translateX(3px);
+    }
   }
 
   &__text {

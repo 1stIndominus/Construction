@@ -2,12 +2,17 @@ import { useState, useEffect, FC } from "react";
 import "./chatButton.scss";
 import { Link } from "react-scroll";
 import { BiX } from "react-icons/bi";
+import { SHOW_CHAT_BUTTON_DELAY } from "../../../constants";
 
 export const ChatButton: FC = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setShow(true);
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, SHOW_CHAT_BUTTON_DELAY);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleVisibility = () => {

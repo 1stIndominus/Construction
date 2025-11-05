@@ -31,7 +31,7 @@ export const Preview: React.FC<Props> = ({ imageUrl, navButtonProps }) => {
   }, []);
 
   return (
-    <image
+    <div
       className="hero"
       id="Home"
       style={{
@@ -55,6 +55,6 @@ export const Preview: React.FC<Props> = ({ imageUrl, navButtonProps }) => {
           icon={navButtonProps.icon}
         />
       </div>
-    </image>
+    </div>
   );
 };
