@@ -1,0 +1,55 @@
+import { ChatButton } from "../../components/buttons/chatButton/ChatButton";
+import { useMenuContext } from "../../context/ContextMenu";
+import { ContactUs } from "../../features/contact us/ContactUs";
+import { CompanyDirector } from "../../features/director/CompanyDirector";
+import { FAQ } from "../../features/faq/FAQ";
+import { Footer } from "../../features/footer/Footer";
+import { NavBar } from "../../features/nav-bar/NavBar";
+import { Preview } from "../../features/preview/Preview";
+import RatingWithComment from "../../features/rating/Rate";
+import { AnalyticsEvent, ContentTypes } from "../../types/type";
+import { BuildingsSection } from "../../features/buildings-section/BuildingsSection";
+import ConstructionBuilding from "../../assets/images/constructionBuilding.jpeg";
+import { ScreenList } from "../../router/constants/ScreenList";
+import { useTrackEvent } from "../../hooks/useTrackEvent";
+import { NEW_BUILDING_SCREEN_LINK_BUTTON_DATA } from "../../staticData/linkButtonData";
+import CardList from "../../features/rating/CardList";
+import { useGetCompanyRate } from "../../hooks/useGetCompanyRate";
+
+const NewBuildings = () => {
+  const { show, toggle } = useMenuContext();
+  useTrackEvent({ eventName: AnalyticsEvent.userVisitedNewBuildingsPage });
+
+  const { data: newBuildRatingData } = useGetCompanyRate({
+    contentType: ContentTypes.NewBuildRating,
+  });
+
+  return (
+    <div className="main__container" onClick={show ? toggle : undefined}>
+      <NavBar linkButtonData={NEW_BUILDING_SCREEN_LINK_BUTTON_DATA} />
+      <div className="main__container--chat">
+        <ChatButton />
+      </div>
+      <Preview
+        imageUrl={ConstructionBuilding}
+        navButtonProps={{
+          title: "Need to fix up your home?",
+          route: ScreenList.HomeRenovation,
+          icon: "🔧",
+        }}
+      />
+      <BuildingsSection />
+      <ContactUs />
+      <CompanyDirector />
+      <div className="rate">
+        <RatingWithComment fromScreen={"New Building"} />
+        {newBuildRatingData && <CardList commentsData={newBuildRatingData} />}
+      </div>
+
+      <FAQ contentType={ContentTypes.MewBuildingFaq} />
+      <Footer />
+    </div>
+  );
+};
+
+export default NewBuildings;

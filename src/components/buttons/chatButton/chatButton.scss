@@ -1,0 +1,66 @@
+@import "../../../utils/mixins";
+@import "../../../utils/vars";
+
+.wrapper {
+  display: none;
+}
+
+.chat {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #FFE53B;
+  background-image: var(--liniar-gradient);
+  cursor: pointer;
+  padding-top: 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+  position: relative;
+  background-size: 300%;
+  background-position: left;
+  transition-duration: 1s;
+  
+
+  &:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -50px;
+    width: max-content;
+    height: 40px;
+    background-color: var(--secondary-dark);
+    color: white;
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 0.5px;
+  }
+
+  &__close {
+    position: absolute;
+    bottom: 60px;
+    right: -7px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.chat:hover .chat__tooltip {
+  opacity: 1;
+  transition-duration: .5s;
+}

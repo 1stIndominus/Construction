@@ -1,0 +1,142 @@
+import { Badge, BadgeVariant } from "../../badge/Badge";
+import {
+  TransformWrapper,
+  TransformComponent,
+  useControls,
+} from "react-zoom-pan-pinch";
+import "./planCard.scss";
+import Carousel from "../../carousels/Carousel";
+import { Link } from "react-scroll";
+import { getBadgeVariant } from "../../../helpers/getBadgeVariant";
+import { GOOGLE_MAPS_BASE_SEARCH_URL } from "../../../constants";
+import { BuildingPlansType } from "../../../types/type";
+
+const Controls = () => {
+  const { zoomIn, zoomOut, resetTransform, centerView } = useControls();
+
+  return (
+    <div className="plan-card__controls">
+      <button
+        className="plan-card__control-btn"
+        onClick={() => zoomIn()}
+        title="Zoom In"
+      >
+        +
+      </button>
+      <button
+        className="plan-card__control-btn"
+        onClick={() => zoomOut()}
+        title="Zoom Out"
+      >
+        -
+      </button>
+      <button
+        className="plan-card__control-btn"
+        onClick={() => centerView()}
+        title="Center View"
+      >
+        ⊞
+      </button>
+      <button
+        className="plan-card__control-btn"
+        onClick={() => resetTransform()}
+        title="Reset View"
+      >
+        ↺
+      </button>
+    </div>
+  );
+};
+
+export const PlanCard = ({ plan }: { plan: BuildingPlansType }) => {
+  const {
+    sold,
+    title,
+    buildingStatus,
+    address,
+    description,
+    planImageUrl,
+    portfolio,
+  } = plan;
+
+  const handleAddressClick = (address: string) => {
+    const encodedAddress = encodeURIComponent(address);
+    const googleMapsUrl = `${GOOGLE_MAPS_BASE_SEARCH_URL}${encodedAddress}`;
+    window.open(googleMapsUrl, "_blank");
+  };
+
+  return (
+    <div className="plan-card">
+      <div className="plan-card__header">
+        <div className="plan-card__badges">
+          <Badge
+            text={buildingStatus}
+            variant={getBadgeVariant(buildingStatus)}
+          />
+          <Badge
+            text={sold ? "Sold" : "Available for Sale"}
+            variant={sold ? BadgeVariant.DANGER : BadgeVariant.SUCCESS}
+          />
+        </div>
+      </div>
+
+      {title && <h3 className="plan-card__title">{title}</h3>}
+      {address && (
+        <p
+          className="plan-card__address"
+          onClick={() => handleAddressClick(address)}
+          title="Click to view on Google Maps"
+        >
+          📍 {address}
+        </p>
+      )}
+      {description && <p className={"plan-card__text"}>{description}</p>}
+
+      {!sold && (
+        <div className="plan-card__preorder">
+          <Link
+            to="contactUs"
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={500}
+            className="plan-card__preorder-btn"
+          >
+            <span className="plan-card__preorder-text">Pre-order House</span>
+          </Link>
+        </div>
+      )}
+
+      <div className="plan-card__image-container">
+        <TransformWrapper
+          initialScale={2}
+          centerOnInit={true}
+          wheel={{ step: 0.1 }}
+          pinch={{ step: 5 }}
+          doubleClick={{ disabled: false, step: 0.7 }}
+          panning={{ disabled: false }}
+          minScale={0.1}
+          centerZoomedOut={true}
+        >
+          {() => (
+            <>
+              <Controls />
+              <TransformComponent
+                wrapperClass="plan-card__transform-wrapper"
+                contentClass="plan-card__transform-content"
+              >
+                <img
+                  src={planImageUrl}
+                  alt={title}
+                  className="plan-card__image"
+                />
+              </TransformComponent>
+            </>
+          )}
+        </TransformWrapper>
+      </div>
+
+      {portfolio && <Carousel portfolio={portfolio} />}
+    </div>
+  );
+};

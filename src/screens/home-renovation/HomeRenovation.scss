@@ -1,0 +1,23 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.main__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  &--chat {
+    position: fixed;
+    width: max-content;
+    margin-right: 30px;
+    top: 100vh - 20;
+    right: 0;
+    z-index: 50;
+
+    @include onTablet {
+      margin-right: 50px;
+      top: 100vh - 12;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../utils/vars";
+@import "../../../utils/mixins.scss";
+
+.button-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  &__title {
+    background: var(--liniar-gradient);
+    border: 2px solid var(--liniar-gradient);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    background-size: 200%;
+    background-position: 0 50%;
+    animation: animate-background 1s infinite alternate linear;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  
+
+  @include onTablet {
+    &__title {
+      font-size: 1.4rem;
+      padding: 10px 20px;
+      gap: 0.4rem;
+    }
+
+    &__icon {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
