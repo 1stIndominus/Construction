@@ -1,5 +1,5 @@
 import { BadgeVariant } from "../components/badge/Badge";
-import { BuildingStatus } from "../hooks/useGetPlansCollectionData";
+import { BuildingStatus } from "../types/type";
 
 export const getBadgeVariant = (status: BuildingStatus) => {
   switch (status) {

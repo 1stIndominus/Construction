@@ -2,15 +2,19 @@ import React, { useRef, useEffect } from "react";
 import "./swiper.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
-import { workingImages } from "../../staticData/imagesData";
 import { scrollHandler } from "../../helpers/scrollHandler";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { WorkingImagesTypes } from "../../types/type";
 
-export const ImageSwiper = () => {
+type Props = {
+  portfolioData: WorkingImagesTypes[];
+};
+
+export const ImageSwiper: React.FC<Props> = ({ portfolioData }) => {
   const title = useRef(null);
   const images = useRef(null);
 
@@ -48,9 +52,9 @@ export const ImageSwiper = () => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper__container"
       >
-        {workingImages.map(({ source, title }) => {
+        {portfolioData?.map(({ source, title, id }) => {
           return (
-            <SwiperSlide key={title}>
+            <SwiperSlide key={id}>
               <img src={source} alt="slide_image" />
               <div className="image__title">{title}</div>
             </SwiperSlide>

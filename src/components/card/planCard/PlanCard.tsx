@@ -4,12 +4,12 @@ import {
   TransformComponent,
   useControls,
 } from "react-zoom-pan-pinch";
-import { BuildingPlansType } from "../../../hooks/useGetPlansCollectionData";
 import "./planCard.scss";
 import Carousel from "../../carousels/Carousel";
 import { Link } from "react-scroll";
 import { getBadgeVariant } from "../../../helpers/getBadgeVariant";
 import { GOOGLE_MAPS_BASE_SEARCH_URL } from "../../../constants";
+import { BuildingPlansType } from "../../../types/type";
 
 const Controls = () => {
   const { zoomIn, zoomOut, resetTransform, centerView } = useControls();
@@ -55,7 +55,7 @@ export const PlanCard = ({ plan }: { plan: BuildingPlansType }) => {
     buildingStatus,
     address,
     description,
-    imageUrl,
+    planImageUrl,
     portfolio,
   } = plan;
 
@@ -125,7 +125,11 @@ export const PlanCard = ({ plan }: { plan: BuildingPlansType }) => {
                 wrapperClass="plan-card__transform-wrapper"
                 contentClass="plan-card__transform-content"
               >
-                <img src={imageUrl} alt={title} className="plan-card__image" />
+                <img
+                  src={planImageUrl}
+                  alt={title}
+                  className="plan-card__image"
+                />
               </TransformComponent>
             </>
           )}

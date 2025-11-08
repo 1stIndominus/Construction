@@ -12,13 +12,22 @@ import { FAQ } from "../../features/faq/FAQ";
 import { ContactUs } from "../../features/contact us/ContactUs";
 import { ChatButton } from "../../components/buttons/chatButton/ChatButton";
 import RatingWithComment from "../../features/rating/Rate";
-import { CollectionIds, DocumentIds } from "../../types/type";
+import { ContentTypes } from "../../types/type";
 import Hero from "../../assets/images/hero.jpg";
 import { ScreenList } from "../../router/constants/ScreenList";
 import { HOME_SCREEN_LINK_BUTTON_DATA } from "../../staticData/linkButtonData";
+import CardList from "../../features/rating/CardList";
+import { useGetCompanyRate } from "../../hooks/useGetCompanyRate";
+import { useGetSidingPortfolioData } from "../../hooks/useGetSidingPortfolioData";
 
 export const HomeRenovation: React.FC = () => {
   const { show, toggle } = useMenuContext();
+
+  const { data: renovationRatingData } = useGetCompanyRate({
+    contentType: ContentTypes.RenovationRating,
+  });
+
+  const { data: portfolioData } = useGetSidingPortfolioData();
 
   return (
     <div className="main__container" onClick={show ? toggle : undefined}>
@@ -37,13 +46,15 @@ export const HomeRenovation: React.FC = () => {
       <About />
       <DeliverySection />
       <DemoSection />
-      <ImageSwiper />
+      {portfolioData.length && <ImageSwiper portfolioData={portfolioData} />}
       <CompanyDirector />
-      <RatingWithComment />
-      <FAQ
-        collectionId={CollectionIds.FAQ}
-        dacumentId={DocumentIds.sidingFAQ}
-      />
+      <div className="rate">
+        <RatingWithComment fromScreen={"Home Renovation"} />
+        {renovationRatingData && (
+          <CardList commentsData={renovationRatingData} />
+        )}
+      </div>
+      <FAQ contentType={ContentTypes.RenovationFaq} />
       <ContactUs />
       <Footer />
     </div>
