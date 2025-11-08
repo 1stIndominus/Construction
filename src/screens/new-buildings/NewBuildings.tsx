@@ -7,16 +7,22 @@ import { Footer } from "../../features/footer/Footer";
 import { NavBar } from "../../features/nav-bar/NavBar";
 import { Preview } from "../../features/preview/Preview";
 import RatingWithComment from "../../features/rating/Rate";
-import { AnalyticsEvent, CollectionIds, DocumentIds } from "../../types/type";
+import { AnalyticsEvent, ContentTypes } from "../../types/type";
 import { BuildingsSection } from "../../features/buildings-section/BuildingsSection";
 import ConstructionBuilding from "../../assets/images/constructionBuilding.jpeg";
 import { ScreenList } from "../../router/constants/ScreenList";
 import { useTrackEvent } from "../../hooks/useTrackEvent";
 import { NEW_BUILDING_SCREEN_LINK_BUTTON_DATA } from "../../staticData/linkButtonData";
+import CardList from "../../features/rating/CardList";
+import { useGetCompanyRate } from "../../hooks/useGetCompanyRate";
 
 const NewBuildings = () => {
   const { show, toggle } = useMenuContext();
   useTrackEvent({ eventName: AnalyticsEvent.userVisitedNewBuildingsPage });
+
+  const { data: newBuildRatingData } = useGetCompanyRate({
+    contentType: ContentTypes.NewBuildRating,
+  });
 
   return (
     <div className="main__container" onClick={show ? toggle : undefined}>
@@ -35,12 +41,12 @@ const NewBuildings = () => {
       <BuildingsSection />
       <ContactUs />
       <CompanyDirector />
-      <RatingWithComment />
+      <div className="rate">
+        <RatingWithComment fromScreen={"New Building"} />
+        {newBuildRatingData && <CardList commentsData={newBuildRatingData} />}
+      </div>
 
-      <FAQ
-        collectionId={CollectionIds.FAQ}
-        dacumentId={DocumentIds.newBuildingFAQ}
-      />
+      <FAQ contentType={ContentTypes.MewBuildingFaq} />
       <Footer />
     </div>
   );

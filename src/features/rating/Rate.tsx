@@ -1,10 +1,13 @@
-import React, { useState, useCallback, ChangeEvent, FormEvent } from "react";
+import { useState, useCallback, ChangeEvent, FormEvent } from "react";
 import { postDataFromInputsToTelegram } from "../../api/fetchData";
 import { StarRating } from "../../components/starRate/StarRating";
-import CardList from "./CardList";
 import "./rate.scss";
 
-const RatingWithComment = () => {
+type Props = {
+  fromScreen: string;
+}
+
+const RatingWithComment: React.FC<Props> = ({ fromScreen }) => {
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const [name, setName] = useState("");
@@ -33,7 +36,7 @@ const RatingWithComment = () => {
     event.preventDefault();
     resetForm();
     console.log(`Rating: ${rating}, Comment: ${comment}, Name: ${name}`);
-    const userComment = `Rating\nUserName: ${name}\nStars: ${rating}\nComment: ${comment}`;
+    const userComment = `Rating\nUserName: ${name}\nStars: ${rating}\nComment: ${comment}\nFrom Screen: ${fromScreen}`;
     postDataFromInputsToTelegram(userComment);
   };
 
@@ -85,7 +88,6 @@ const RatingWithComment = () => {
         />
         <br />
       </form>
-      <CardList />
     </div>
   );
 };

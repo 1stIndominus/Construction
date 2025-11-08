@@ -1,15 +1,11 @@
-import { useGetPlansCollectionData } from "../../hooks/useGetPlansCollectionData";
 import { PlanCard } from "../../components/card/planCard/PlanCard";
 import "./buildingsSection.scss";
-import { CollectionIds, DocumentIds } from "../../types/type";
+import { useGetPlansData } from "../../hooks/useGetPlansData";
 
 export const BuildingsSection = () => {
-  const { collectionData } = useGetPlansCollectionData({
-    collectionId: CollectionIds.plans,
-    dacumentId: DocumentIds.newBuildingPlans,
-  });
+  const { data: plansData } = useGetPlansData();
 
-  if (!collectionData || !collectionData.length) {
+  if (!plansData || !plansData.length) {
     return null;
   }
 
@@ -25,7 +21,7 @@ export const BuildingsSection = () => {
       </div>
 
       <div className="building__content">
-        {collectionData.map((plan, index) => (
+        {plansData.map((plan, index) => (
           <PlanCard key={plan.id || index} plan={plan} />
         ))}
       </div>

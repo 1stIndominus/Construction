@@ -2,20 +2,19 @@ import { useState, useRef, useEffect } from "react";
 import "./faq.scss";
 import { scrollHandler } from "../../helpers/scrollHandler";
 import { BsChevronUp } from "react-icons/bs";
-import { useGetFAQCollectionData } from "../../hooks/useGetFAQCollectionData";
+import { useGetFAQData } from "../../hooks/useGetFAQData";
+import { ContentTypes } from "../../types/type";
 
 type Props = {
-  collectionId: string;
-  dacumentId: string;
+  contentType: ContentTypes;
 };
 
-export const FAQ: React.FC<Props> = ({ collectionId, dacumentId }) => {
+export const FAQ: React.FC<Props> = ({ contentType }) => {
   const [activeItems, setActiveItems] = useState<number[]>([]);
   const faqRef = useRef<HTMLDivElement | null>(null);
 
-  const { collectionData } = useGetFAQCollectionData({
-    collectionId,
-    dacumentId,
+  const { data } = useGetFAQData({
+    contentType,
   });
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export const FAQ: React.FC<Props> = ({ collectionId, dacumentId }) => {
       <h1 className="faq__title">
         <span className="about__content--me-highlight">FAQ</span>s
       </h1>
-      {collectionData?.map((faq, index) => {
+      {data?.map((faq, index) => {
         const isActive = activeItems.includes(index);
 
         return (
